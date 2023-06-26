@@ -1,4 +1,4 @@
-/****** General ***********/
+/****** General, modifié le 26/06/2023 par Elia DE FAYS ***********/
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -13,10 +13,7 @@
     color: var(--main-color);
 }
 
-body {
-    display: flex;
-    justify-content: center;
-}
+
 
 .main-container {
     width: 100%;
@@ -56,7 +53,12 @@ body {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
+    height: 146px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 20px;
+    background: #FFF;
 }
 
 .hebergements-and-populaires section {

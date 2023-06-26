@@ -1,6 +1,23 @@
-.a:hover:hover {
+/****** page accueil, modifié le 26/06/2023 par Elia DE FAYS ***********/
+
+
+/* structure de la page d'accueil */
+.containerPage {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+    grid-template-areas: 
+        "h h h "
+        "a a a "
+        "b b c "
+        "d d d "  
+        "f f f "    
+   ;
+}     
+        /* coloration au survol  */
+  .a:hover:hover {
     color: blue;
 }
+/* alignement header  */
 nav {
   display: flex;
   flex-direction: row;
