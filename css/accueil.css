@@ -1,26 +1,346 @@
 /****** page accueil, modifié le 26/06/2023 par Elia DE FAYS ***********/
 
 
-/* structure de la page d'accueil */
-.containerPage {
-    display: grid;
-    grid-template: repeat(5, 1fr) / repeat(3, 1fr);
-    grid-template-areas: 
-        "h h h "
-        "a a a "
-        "b b c "
-        "d d d "  
-        "f f f "    
-   ;
-}     
-        /* coloration au survol  */
-  .a:hover:hover {
-    color: blue;
+/************** structure de la mise en page ****************************************/
+/************** header ****************************************/
+
+a {
+    color: var(--blue, #0065FC);
+    font-family: 'Raleway', sans-serif;
+    height: 22px;
+
 }
-/* alignement header  */
+
+
+p {
+   
+    color: #000;
+    
+}
+  
+        
+.a:hover {          /* coloration au survol  */
+    color: var(--blue, #0065FC);
+    font-weight: 500;
+    
+}
+/************  header  **************************/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+   
+}
+
+.div {
+    display: flex;
+}
+
+img#logoBooki {
+    height: 55px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.a#hebergementNav .a#activiteNav {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-right:100px;
+    margin-right: auto;
+}  
+a:-webkit-any-link {
+    color: var(--blue, #0065FC);
+    cursor: pointer;
+    
+}
+
+.menu {
+    
+    font-weight: 500;
+    gap: 15px;
+    align-self:auto
+}
+
 nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
 } 
+
+/************** section info group --> navigation ****************************************/
+section.infogroup {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    width: 100%;
+    
+    padding: 30px;
+    box-sizing: border-box;
+}
+/************** sous-section "headline"= rechercher        --> navigation ****************************************/
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+h4 {
+    font-weight: lighter; /*pour mettre la police entre normal et gras */
+    font-size: 16px;
+}
+.zoneRecherche {
+    padding-left: 46px;
+    padding-top: 30px;
+}
+.zoneRecherche p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+form {
+    display: flex;
+    margin-top: 0;
+}
+input {
+    padding: 15px;
+    width: 235px;
+    border: 1px solid #F2F2F2;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    outline: none; /* Pour supprimer le contour */
+}
+input[type=text]:focus {
+    border: 1px solid #F2F2F2;
+}
+/* Modifie la couleur de fond de l'autocomplétion */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+/* Modification de la police dans le champs de recherche */
+::placeholder {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 1; /* pour foncer la couleur de la police dans firefox */
+}
+/* Mise en forme du bouton rechercher sur ordinateur et tablette */
+.boutonRechercher_DesktopTablette {
+    background-color: #0065FC;
+    color: white;
+    width: 133px;
+    border: 0px solid #F2F2F2;
+    border-radius: 0px 18px 18px 0px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 17px;
+}
+.boutonRechercher_DesktopTablette:hover, .boutonRechercher_DesktopTablette:focus, .boutonRechercher_DesktopTablette:active {
+    border: 1px solid #DEEBFF;
+    cursor: pointer;
+}
+/* Icône barre de recherche */
+.fa-location-dot {
+    font-size: 17px; /* Dimensionnement de l'icône "localisation" */
+    border: 2px solid #F2F2F2;
+    background-color: #F2F2F2;
+    padding: 15px;
+    padding-left: 18px;
+    border-radius: 18px 0px 0px 18px;
+}
+
+
+
+/************** sous-section "searchBar"=         --> navigation ****************************************/
+
+
+
+
+/************** sous-section "filterBar"=         --> navigation ****************************************/
+
+
+    
+h5 {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 18px;
+    column-gap: 20px;
+}    
+
+
+/***.aspect_filtres:hover, .aspect_filtres:focus, .aspect_filtres:active{
+    color: #0065FC;
+    cursor: pointer;
+}***/
+.eco.Filtre {
+    background-color: #DEEBFF;
+
+}
+
+
+
+
+
+
+/************** sous-section "infoBar"= information        --> navigation ****************************************/
+.infoIcon fa-circle-info fa-xs {
+    display: flex;
+    
+}
+h3 {
+    font-weight: lighter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    gap: 10px;
+    align-self: stretch;
+}
+.infoBar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/************** section de hébergement et populaire ****************************************/
+section.offers {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin:auto;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    
+}
+/************** section de "hébergement" ************ ****************************************/
+section.offersMain {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding:10px;
+    margin:50px;
+    background-color:plum; 
+}
+/************** section "populaire" ************ ****************************************/
+section.offersSponsored {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:10px;
+    height: 400px;
+    margin:auto;
+    background-color: greenyellow;
+}
+/************** section de activité ****************************************/
+
+
+section.activite {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin:auto;
+    gap:20px;
+    background-color: rgb(66, 168, 226);
+}
+/* container  */
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    border: solid 2px #000
+     
+}
+.box {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.spaceAround {
+    justify-content: space-around;
+     width: 100%;  
+}
+.element {
+   
+    min-height: 150px;
+    min-width: 200px;
+    
+}
+.element1 {
+    background-color : orange;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    flex-shrink: 1;
+}
+.element2 {
+    background-color : blue;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    flex-shrink: 1;
+   
+}
+.element3 {
+    background-color : rgb(7, 73, 7);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start:1;
+    grid-row-end: 2;
+    flex-shrink: 1;
+    
+}
+.element4 {
+    background-color: rgb(199, 238, 59);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    flex-shrink: 1;
+    
+}
+.element5 {
+    background-color: rgb(76, 182, 182);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    flex-shrink: 1;
+   
+}
+.element6 {
+    background-color: rgb(145, 58, 58);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    flex-shrink: 1;
+   
+}
+
+section.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin:auto;
+    gap:20px;
+    background-color:rosybrown;
+}
+  

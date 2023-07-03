@@ -1,0 +1,168 @@
+<!DOCTYPE html>  <!-- language de programmation utilisé, ici html -->                                    <!--derniere modification le 29/06/2023 par Elia DE FAYS-->
+<html lang="fr"> <!-- langue francais utilisé, toujours en miniscule -->
+<!----------------------------head debut = chargement des elements pour le fonctionnnement de la page----------------------------------------------->
+    <head>
+        <meta charset="UTF-8"> <!-- encodage des caractères -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Indique au navigateur comment afficher la page sur différents appareils mobiles -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+        <title>Booki</title>                                                                                    <!--titre de la page dans navigateur-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">                                             <!--connection au style d'écriture utilsé-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/260465ad8a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./fontawesome/sprites/solid.svg"/>                           <!--connection bibliothèque icon-->
+        <link rel="stylesheet" href="./css/style.css">                                              <!--connection feuille de style CSS-->
+        <link rel="stylesheet" href="./css/accueil.css">
+        <link href="/./fontawesome/sprites/solid.svg#">                                  <!--connection chemin acces icon CSS-->
+    </head>
+<!----------------------------head fin = chargement des elements pour le fonctionnnement de la page----------------------------------------------->
+    <body>
+    <header>
+        <div class="logo"><!--logo-->
+            <img id="logoBooki" src="images/logo/Booki.png" alt="Logo Booki" titre = "booki, réservation en ligne de vacances sur Marseille "> <!--logo-->
+        </div>
+        <nav class="menu">
+                <!--menu-->   <!-- contenu droite header  -->          
+                <a id="hebergementNav" href="./hebergement.html">Hébergement</a>
+                <a id="activiteNav" href="./activite.html">activité</a>
+        </nav>
+    </header>
+
+    <main> 
+        <div class="barreSéparation">
+            
+            <i class="fa-solid fa-dog" aria-hidden="true"></i>
+            <i class="fa-thin fa-horizontal-rule fa-2xl" aria-hidden="true" role="img" ></i>
+            <i class="fa-solid fa-horizontal-rule fa-2xl"></i>
+            <i class="fa-solid fa-money-bill-wave" aria-hidden="true" role="img"></i> 
+            <i class="fa-solid fa-fire" aria-hidden="true" role="img"></i>
+            <i class="fa-solid fa-person" aria-hidden="true" role="img"></i>
+            <i class="fa-solid fa-minus fa-2xl" aria-hidden="true" role="img" ></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" style="color: #d2d6e0;" aria-hidden="true" ></i>
+            <i class="fa-solid fa-heart" aria-hidden="true" role="img"></i>
+            <i class="fa-solid fa-location-dot" aria-hidden="true" role="img"></i>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true" role="img"></i>
+           
+
+            
+        </div>
+        <!-- contenu de la page-->
+        <section class="infogroup">
+            <!-- contenu "headline" = Présentation-->
+            <article class="Présentation">
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <h4>En plein centre ville ou en pleine nature</h4>
+            </article>
+            <!-- contenu "SearchBar" = partie formulaire-->
+            <article class="zoneRecherche"> 
+                <form method="post" action=" " id="formulaire"> <!-- action rester libre pour URL futur-->
+                    <i class="fa-solid fa-location-dot" aria-hidden="true" role="img"></i> 
+                    <input type="text" name="localisation" placeholder="Ex. Marseille, France" /><!-- placeholder, exemple de champs-->
+                    <button type="button" class="boutonRechercher_DesktopTablette">Rechercher</button>
+                    <button type="button" class="boutonRechercher_Mobile"><i class="fa-solid fa-magnifying-glass" aria-hidden="true" role="button" ></i></button>
+                </form>
+            </article>
+            
+              <!-- contenu "FilterBar" = partie bouton filtres-->
+            <article class="filtres">
+                <h5>Filtres</h5>
+
+                <div class="eco.Filtre">
+                    <div><i class="fa-solid fa-money-bill-wave" aria-hidden="true" role="img"></i>
+                    </div>
+                    <div><h5>&Eacute;conomique</h5>
+                    </div>
+                </div>
+
+                <div class="person.Filtre">
+                    <div>
+                        <i class="fa-solid fa-person" icone aria-hidden="true" role="img"></i>
+                    </div>
+                    <h5>Familial</h5>
+                </div>
+                <div class="romantique.Filtre">
+                    <div>
+                        <i class="fa-solid fa-heart" aria-hidden="true" role="img"></i>
+                    </div>
+                    <h5>Romantique</h5>
+                </div>
+                <div class="aspect.Filtre">
+                    <div >
+                        <i class="fa-solid fa-fire" aria-hidden="true" role="img"></i>
+                    </div>
+                    <h5>Nos pépites</h5>
+                </div>
+            </article>
+           
+            <article class="infoBar">
+                <div class="infoIcon">
+                <i class="fa-solid fa-circle-info fa-xs" aria-hidden="true" role="img"></i>
+                </div>
+                <h3> Plus de 500 logements disponible dans cette ville</h3>
+            </article>
+           
+        </section>
+        <section class="offers">
+           
+            <section class="offersMain"><p>section offersMain</p>
+                <div class="container spaceAround">
+                    <div class="cardMain element1">
+                        <p>cardMain 1</p>
+                    </div>
+                    <div class="element element2">
+                        <p>cardMain 2</p>
+                    </div>
+                    <div class="element element3">
+                        <p>cardMain 3</p>
+                    </div> 
+                    <div class="element element4">
+                        <p>cardMain 4</p>
+                    </div>
+                    <div class="element element5">
+                        <p>cardMain 5</p>
+                    </div>
+                    <div class="element element6">
+                        <p>cardMain 6</p>
+                    </div>
+                </div>
+                
+            </section>
+            <section class="offersSponsored">
+                <aside>
+                    <p>  section offersSponsored /   balise aside  flex-wrap: wrap;</p>
+                </aside>
+            </section>
+            
+        </section>
+        <section class="activite">
+            
+            <div class="box.container1">
+                <p>activite 1</p>
+            </div>  
+            <div class="box.container2">
+                <p>activite 2</p>
+            </div>
+            <div class="box.container3">
+                <p>activite 3</p>
+            </div>
+            <div class="box.container4">
+                <p>activite 4</p>
+            </div>
+            
+        </section>
+    </main>
+    <footer></footer> 
+        <section class="footer">
+            <section> section footer 1</section>
+            <section> section footer 2</section>
+            <section> section footer 3</section>
+        </section>
+    </footer>
+            <!-- fin de footer-->
+                
+        
+    
+    </body>
+</html>

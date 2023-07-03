@@ -1,6 +1,9 @@
-/****** General, modifié le 26/06/2023 par Elia DE FAYS ***********/
+/****** General, modifié le 30 /06/2023 par Elia DE FAYS ***********/
+@media (max-width: 1440px) {
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box; /*  bordure et remplissage défini pour la page */
+    margin: 0;
 }
 
 :root {
@@ -13,8 +16,23 @@
     color: var(--main-color);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-
+}
+section.activite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .main-container {
     width: 100%;
     max-width: 1440px;
@@ -67,6 +85,7 @@
     padding: 30px;
     box-sizing: border-box;
 }
+
 
 /****** Hebergements ***********/
 .hebergements {
@@ -121,6 +140,7 @@
 
 
 
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -129,9 +149,23 @@
     .hebergements-and-populaires {
         flex-direction: column;
     }
+    section.offers {
+        flex-direction: column;
+        width: 100%;
+    }
 
     .hebergements {
         width: 100%;
+    }
+
+    section.offersSponsored {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px;
+        height: 400px;
+        margin:auto;
+        background-color: greenyellow;
     }
 
     .populaires {
@@ -156,9 +190,200 @@
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-}
+
+    .container {
+        flex-shrink: 2;
+        
+    }
+    }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    /*******  header ***********/
+    header {
+        display: flex;
+        flex-direction: column;
+    }  
+    #logoBooki {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: 0;
+    }
+    a:-webkit-any-link {
+        color: var(--blue, #0065FC);
+        cursor: pointer;
+        
+    }
+        
+       
+    .logo {
+        justify-content: center;
+    }   
+    
+    .a#hebergementNav .a#activiteNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin:auto;
+        padding: 25px;
+        justify-content: space-around;
+        border-bottom: 4px solid #F2F2F2;
+        padding-bottom: 20px;
+        color: var(--blue, #0065FC);
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        margin:auto;
+        padding-top: 25px;
+        padding-left: 10px;
+        justify-content: space-between;
+        gap:20px;
+        border-color: #0065FC;
+        border-bottom-color:#0065FC;
+    }
+      
+    nav {
+        
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      
+    } 
+    
+
+    #hebergementNav, #activiteNav {
+        display: flex;
+        flex-direction: column;
+    }
+    /*******  main **********/
+        
+     /********************************* Partie Recherche ***************************/
+     #zone_recherche{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    /* On masque le bouton rechercher */
+    .bouton_rechercher_desktop_tablette{
+        display: none
+    }
+    /* Affichage du bouton loupe pour mobile */
+    .bouton_rechercher_mobile {
+        background-color: #0065FC;
+        color: white;
+        border: none;
+        border-radius: 18px;
+        padding-left: 19px;
+        padding-right: 19px;
+        /* position relative et rigth 15px pour décaler le bouton "loupe" légèrement vers la gauche sur le champ de recherche */
+        position: relative;
+        right: 15px;
+    }
+    /* Dimensionnement de l'icône "loupe" */
+    .loupe{
+        font-size: 18px;
+    }
+    /* Réduire la taille de l'écriture par défaut dans le champ de recherche input pour éviter troncage */
+    ::placeholder {
+        font-size: 12px;
+    }    
+    
+
+
+        /****   *****/
+   
+    
+    section.offers {
+        flex-wrap: wrap-reverse;
+        width: 100%;
+    }
+    section.offersMain {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    section.Sponsored {
+        
+        flex-direction: column;
+    }
+    section.activite {
+        flex-direction: column;
+
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section.footer {
+        flex-direction: column;
+    }
+    .logoReservia {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+    .element1 {
+        background-color : orange;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      
+    }
+    .element2 {
+        background-color : blue;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        
+       
+    }
+    .element3 {
+        background-color : rgb(7, 73, 7);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:3;
+        grid-row-end: 4;
+        
+        
+    }
+    .element4 {
+        background-color: rgb(199, 238, 59);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        
+        
+    }
+    .element5 {
+        background-color: rgb(76, 182, 182);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        
+       
+    }
+    .element6 {
+        background-color: rgb(145, 58, 58);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        flex-shrink: 1;
+    }
 }
