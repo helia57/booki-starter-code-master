@@ -1,4 +1,4 @@
-/****** General, modifié le 30 /06/2023 par Elia DE FAYS ***********/
+/****** General, modifié le 04 /07/2023 par Elia DE FAYS ***********/
 @media (max-width: 1440px) {
 * {
     font-family: 'Raleway', sans-serif;
@@ -265,7 +265,7 @@ footer {
     }
     /*******  main **********/
         
-     /********************************* Partie Recherche ***************************/
+     /********************************* Partie SearchBar = "Recherche" ***************************/
      #zone_recherche{
         width: 100%;
     }
@@ -296,8 +296,9 @@ footer {
     ::placeholder {
         font-size: 12px;
     }    
+    /******************************************* filterBar = filtres*********************************/
     
-
+   
 
         /****   *****/
    
