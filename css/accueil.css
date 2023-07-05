@@ -3,15 +3,56 @@
 
 /************** structure de la mise en page ****************************************/
 /************** header ****************************************/
+@media (max-width: 1440px) {
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box; /*  bordure et remplissage défini pour la page */
+    margin: 0;
+}
+    
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+    
+.fa-solid {
+    color: var(--main-color);
+}
+    
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+a:-webkit-any-link {
+    font-family: 'Raleway', sans-serif;
+    color: var(--blue, #0065FC);
+    height: 22px;
+    justify-content: space-between;
+    padding: 19px;
+    cursor: pointer;
+    text-decoration-color: var(--blue, #093577)  ;
+}
 
-a {
+    
+
+}
+ul {
+    display:flex;
+    flex-wrap: wrap; 
+}
+li {
+    
+    display:flex;
+    flex-direction: row;
     color: var(--blue, #0065FC);
     font-family: 'Raleway', sans-serif;
     height: 22px;
-
+    justify-content: space-between;
+    padding: 19px;
 }
-
-
 p {
    
     color: #000;
@@ -21,7 +62,7 @@ p {
         
 .a:hover {          /* coloration au survol  */
     color: var(--blue, #0065FC);
-    font-weight: 500;
+    font-weight: 600;
     
 }
 /************  header  **************************/
@@ -46,18 +87,12 @@ img#logoBooki {
 .a#hebergementNav .a#activiteNav {
     display: flex;
     flex-direction: row;
-    margin: auto;
+    margin: 150px;
     padding-right:100px;
-    margin-right: auto;
+    margin-right: 15px;
 }  
-a:-webkit-any-link {
-    color: var(--blue, #0065FC);
-    cursor: pointer;
-    
-}
 
 .menu {
-    
     font-weight: 500;
     gap: 15px;
     align-self:auto
@@ -201,9 +236,7 @@ button {
     color: #0065FC;
     cursor: pointer;
 }
-.icon_filtres{
-   
-}
+
 h4 {
     font-size: 18px;
     
@@ -265,8 +298,10 @@ section.offers {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-    
+  
 }
+
+
 /************** section de "hébergement" ************ ****************************************/
 section.offersMain {
     display: inline-flex;
@@ -291,7 +326,7 @@ section.offersSponsored {
 
 section.activite {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
@@ -379,6 +414,54 @@ section.activite {
    
 }
 
+
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** footer ***********/
 section.footer {
     display: flex;
     flex-wrap: wrap;
@@ -389,4 +472,252 @@ section.footer {
     gap:20px;
     background-color:rosybrown;
 }
-  
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+    section.offers {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    section.offersSponsored {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px;
+        height: 400px;
+        margin:auto;
+        background-color: greenyellow;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards .card {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    .container {
+        flex-shrink: 2;
+        
+    }
+    }
+    
+    
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /*******  header ***********/
+    header {
+        display: flex;
+        flex-direction: column;
+    }  
+    #logoBooki {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: 0;
+    }
+    a:-webkit-any-link {
+        color: var(--blue, #0065FC);
+        cursor: pointer;
+        
+    }
+        
+       
+    .logo {
+        justify-content: center;
+    }   
+    
+    .a#hebergementNav .a#activiteNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin:auto;
+        padding: 25px;
+        justify-content: space-around;
+        border-bottom: 4px solid #F2F2F2;
+        padding-bottom: 20px;
+        color: var(--blue, #0065FC);
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        margin:auto;
+        padding-top: 25px;
+        padding-left: 10px;
+        justify-content: space-between;
+        gap:20px;
+        border-color: #0065FC;
+        border-bottom-color:#0065FC;
+    }
+      
+    nav {
+        
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      
+    } 
+    
+
+    #hebergementNav, #activiteNav {
+        display: flex;
+        flex-direction: column;
+    }
+    /*******  main **********/
+        
+     /********************************* Partie SearchBar = "Recherche" ***************************/
+     #zone_recherche{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    /* On masque le bouton rechercher */
+    .bouton_rechercher_desktop_tablette{
+        display: none
+    }
+    /* Affichage du bouton loupe pour mobile */
+    .bouton_rechercher_mobile {
+        background-color: #0065FC;
+        color: white;
+        border: none;
+        border-radius: 18px;
+        padding-left: 19px;
+        padding-right: 19px;
+        /* position relative et rigth 15px pour décaler le bouton "loupe" légèrement vers la gauche sur le champ de recherche */
+        position: relative;
+        right: 15px;
+    }
+    /* Dimensionnement de l'icône "loupe" */
+    .loupe{
+        font-size: 18px;
+    }
+    /* Réduire la taille de l'écriture par défaut dans le champ de recherche input pour éviter troncage */
+    ::placeholder {
+        font-size: 12px;
+    }    
+    /******************************************* filterBar = filtres*********************************/
+    
+   
+
+        /****   *****/
+   
+    
+    section.offers {
+        flex-wrap: wrap-reverse;
+        width: 100%;
+    }
+    section.offersMain {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    section.Sponsored {
+        
+        flex-direction: column;
+    }
+    section.activite {
+        flex-direction: column;
+
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section.footer {
+        flex-direction: column;
+    }
+    .logoReservia {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+    .element1 {
+        background-color : orange;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      
+    }
+    .element2 {
+        background-color : blue;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        
+       
+    }
+    .element3 {
+        background-color : rgb(7, 73, 7);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:3;
+        grid-row-end: 4;
+        
+        
+    }
+    .element4 {
+        background-color: rgb(199, 238, 59);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        
+        
+    }
+    .element5 {
+        background-color: rgb(76, 182, 182);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        
+       
+    }
+    .element6 {
+        background-color: rgb(145, 58, 58);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        flex-shrink: 1;
+    }
+}
