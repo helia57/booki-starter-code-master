@@ -19,7 +19,6 @@
     body {
         display: flex;
         flex-direction: column;
-        
         margin: 0;
         
     }
@@ -73,7 +72,10 @@
     }
     #logoBooki {
         display: flex;
-        width: 40%;
+        width: 40%;          
+        overflow: clip;
+        
+        
     }
     
     

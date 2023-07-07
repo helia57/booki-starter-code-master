@@ -1,4 +1,4 @@
-<!DOCTYPE html>  <!-- garantit que le navigateur suit les spécifications les plus pertinentes -->         <!--derniere modification le 05/07/2023 par Elia DE FAYS-->
+<!DOCTYPE html>  <!-- garantit que le navigateur suit les spécifications les plus pertinentes -->         <!--derniere modification le 06/07/2023 par Elia DE FAYS-->
 <html lang="fr"> <!-- langue francais -->
 <!----------------------------head debut = chargement des elements pour le fonctionnnement de la page----------------------------------------------->
     <head>
@@ -22,57 +22,64 @@
 <!----------------------------head fin = chargement des elements pour le fonctionnnement de la page----------------------------------------------->
     <body>
     <header>
-        <div class="logo"><!--logo--><!--menu-->      
+        <div id="logocontainer"><!--logo--><!--menu-->      
             <img id="logoBooki" src="images/logo/Booki.png" alt="Logo Booki" titre = "booki, réservation en ligne de vacances sur Marseille "> <!--logo-->
         </div>
         <nav class="menu">
-            <ul>
-                <a id="hebergementNav" href="#">Hébergement</a>
-                <a id="activiteNav" href="#">activité</a>
-            </ul>
+            
+            <button type="button" id="hebergementsNav"href="#">Hébergements</button>
+            <button type="button" id="activitesNav" href="#">activités</button>
+                
+            
         </nav>
     </header>
 
     <main> <!-- contenu de la page-->
         <section class="infogroup">
-            <article class="Présentation">  <!-- contenu "headline" = Présentation-->
+            <article class="Presentation">  <!-- contenu "headline" = Présentation-->
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <h2>En plein centre ville ou en pleine nature</h2>
             </article>
             <article class="zoneRecherche">   <!-- contenu "SearchBar" = partie formulaire-->
-                <form method="post" action=" " id="formulaire"> <!-- action rester libre pour URL futur-->
-                    <span class="fa-solid fa-location-dot" aria-hidden="true" role="img"></span> 
-                    <input type="text" name="localisation" placeholder="Ex. Marseille, France" /><!-- placeholder, exemple de champs-->
-                    <button type="button" class="boutonRechercher_DesktopTablette">Rechercher</button>
+                <form method="post" action=" " id="SearchBar"> <!-- action rester libre pour URL futur-->
+                    <i class="fa-solid fa-location-dot" aria-hidden="true" role="img"></i> 
+                    <input type="search" name="localisation" placeholder=" Marseille, France" /><!-- placeholder, exemple de champs-->
+                    <button type="button" class="boutonRechercher_DesktopTablette" value="rechercher">Rechercher</button>
                     <button type="button" class="boutonRechercher_Mobile"><i class="fa-solid fa-magnifying-glass" aria-hidden="true" role="button" ></i></button>
                 </form>
             </article>
             <article id="filterBar"> <!-- contenu "FilterBar" = partie bouton filtres-->
                     <h4>Filtres</h4>
-                    <form method="post" action=" " id="economique">
-                    <button type="button" class="filtre economique" >
-                        <i class="fa-solid fa-money-bill-wave" id="icon_filtres" aria-hidden="true"role="button"></i>
-                        <h5>&Eacute;conomique</h5>
-                    </button>
-                    </form>
-                    <form method="post" action=" " id="famillial">
-                        <button type="button" class="filtre famillial"                           >
-                            <span class="fa-solid fa-person" id="icon_filtres" aria-hidden="true"role="button"></span>
-                            <h5>Familial</h5>
-                        </button>
-                    </form>
-                    <form method="post" action=" " id="Romantique">
-                        <button type="button"class="filtre famillial">
-                                <span class="fa-solid fa-heart" id="icon_filtres" aria-hidden="true"role="button"></span>
-                                <h5>Romantique</h5>
-                        </button>
-                    </form >
-                    <form method="post" action=" " id="pepites">        
-                        <button type="button" class="filtre pepites">
-                            <span class="fa-solid fa-fire" id="icon_filtres" aria-hidden="true"role="button"></span>
-                            <h5>Nos pépites</h5>
-                        </button>
-                    </form>
+                    <div id="choix">
+                        <div id="frame16">
+                        <form method="post" action=" " id="economique">
+                            <button type="button" class="filtre economique" >
+                                <i class="fa-solid fa-money-bill-wave" id="icon_filtres" aria-hidden="true"role="button"></i>
+                                <h5>&Eacute;conomique</h5>
+                            </button>
+                        </form>
+                        <form method="post" action=" " id="familial">
+                            <button type="button" class="filtre familial"                           >
+                                <span class="fa-solid fa-person" id="icon_filtres" aria-hidden="true"role="button"></span>
+                                <h5>Familial</h5>
+                            </button>
+                        </form>
+                        </div>
+                        <div id="frame17">
+                        <form method="post" action=" " id="romantique">
+                            <button type="button"class="filtre romantique">
+                                    <span class="fa-solid fa-heart" id="icon_filtres" aria-hidden="true"role="button"></span>
+                                    <h5>Romantique</h5>
+                            </button>
+                        </form >
+                        <form method="post" action=" " id="pepites">        
+                            <button type="button" class="filtre pepites">
+                                <span class="fa-solid fa-fire" id="icon_filtres" aria-hidden="true"role="button"></span>
+                                <h5>Nos pépites</h5>
+                            </button>
+                        </form>
+                        </div>
+                    </div>
             </article>
            <article class="infoBar">
                 <div class="infoIcon">
