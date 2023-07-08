@@ -1,4 +1,4 @@
-<!DOCTYPE html>  <!-- garantit que le navigateur suit les spécifications les plus pertinentes -->         <!--derniere modification le 06/07/2023 par Elia DE FAYS-->
+<!DOCTYPE html>  <!-- garantit que le navigateur suit les spécifications les plus pertinentes -->         <!--derniere modification le 08/07/2023 00h00 par Elia DE FAYS-->
 <html lang="fr"> <!-- langue francais -->
 <!----------------------------head debut = chargement des elements pour le fonctionnnement de la page----------------------------------------------->
     <head>
@@ -26,11 +26,12 @@
             <img id="logoBooki" src="images/logo/Booki.png" alt="Logo Booki" titre = "booki, réservation en ligne de vacances sur Marseille "> <!--logo-->
         </div>
         <nav class="menu">
-            
-            <button type="button" id="hebergementsNav"href="#">Hébergements</button>
-            <button type="button" id="activitesNav" href="#">activités</button>
-                
-            
+            <form id="boutonHeb">
+                <button type="button" id="hebergementsNav"href="#">Hébergements</button> 
+            </form>
+            <form id="boutonAct">
+                <button type="button" id="activitesNav" href="#">activités</button>
+            </form>
         </nav>
     </header>
 
@@ -83,14 +84,14 @@
             </article>
            <article class="infoBar">
                 <div class="infoIcon">
-                <i class="fa-solid fa-circle-info fa-xs" aria-hidden="true" role="img"></i>
+                <i class="fa-solid fa-info" aria-hidden="true" role="img"></i>
                 </div>
                 <h3> Plus de 500 logements disponible dans cette ville</h3>
             </article>
            
         </section>
         <section class="offers">
-           
+           <!--
             <section class="offersMain"><p>section offersMain</p>
                 <div class="container spaceAround">
                     <div class="card">
@@ -107,7 +108,7 @@
                             <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                             <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
                             <span class="sr-only">Note de 4 sur 5</span>
-                    </div>
+                    </div>-->
 
 
 
