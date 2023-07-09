@@ -158,15 +158,16 @@
     }
     
     /************** sous-section "searchBar"= recherche --> navigation ****************************************/
+    
     article.zoneRecherche {
         display: flex;
-        width: 50%;
-    }
-        
+        width: 35%;
+    }    
     
     #SearchBar {
         display: flex;
-        width: 50%;
+        flex-wrap: nowrap;
+        width: 80%;
         height: 49px;
         bottom: 2px;
         align-items: center;
@@ -228,16 +229,15 @@
         border: 1px solid #DEEBFF;
         cursor: pointer;
     }
-    /* Icône barre de recherche */
+    /* Icône pour "barre de recherche" */
     .fa-location-dot {
         display: flex;
         flex-direction: row;
         font-size: 17px;
         width: 50px;
         height: 46px;
-        flex-shrink: 0;
-        top: 16px;
-        left: 18px;
+       
+       /* Alignement avec l'imput */
         border: 2px solid #F2F2F2;
         background-color: #F2F2F2;
         padding-right: 16px;
@@ -586,8 +586,14 @@
     #SearchBar {
         width: 100%
     } 
-    
-
+    article.zoneRecherche {
+        display: flex;
+        width: 45%;
+    }    
+    .fa-location-dot {
+        position:relative;
+        top: 0.5px; 
+    }
 
 
 
@@ -639,11 +645,7 @@
         color: #000;
         text-align: center;
         /* Title/Filter */
-        font-family: Raleway;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        
         
     }
 
@@ -730,6 +732,7 @@
        
         display:flex;
         flex-direction: column;
+        padding: 0px 20px;
     }
 
 
@@ -802,7 +805,20 @@
         
 
      /************** Partie SearchBar = "Recherche" ***************************/
-    #searchBar {
+    
+    article.zoneRecherche {
+        
+        width: 103%;
+    }
+    
+    .fa-location-dot {
+        position:relative;
+        top: -2px; 
+    }
+    
+    
+    
+     #searchBar {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -810,6 +826,8 @@
     input {
         display: flex;
         width: 100%;
+        align-self: stretch;
+       
     }
     /* On masque le bouton rechercher */
     .boutonRechercher_DesktopTablette {
@@ -823,18 +841,20 @@
         height: 46px;
         border: none;
         border-radius: 18px;
-        padding-left: 19px;
-        padding-right: 19px;
-        /* position relative et rigth 15px pour décaler le bouton "loupe" légèrement vers la gauche sur le champ de recherche */
+        padding: 15px 16px;
+        
+        /* position relative et rigth 15px, 2px bottom, pour décaler le bouton "loupe" légèrement vers la gauche sur le champ de recherche */
         position: relative;
-        right: 15px;
+        right: 20px;
+        bottom: 2px;
+       
     }
     /* Dimensionnement de l'icône "loupe" */
     .fa-magnifying-glass {
         display: flex;
         font-size: 18px;
         color: #DEEBFF;
-        line-height: 2.6;
+        line-height: 1;
     }
     
     
@@ -993,4 +1013,7 @@
         flex-shrink: 1;
     }
 }
+}
+
+
 }
