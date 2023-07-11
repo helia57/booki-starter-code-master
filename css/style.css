@@ -46,6 +46,7 @@
         display: flex;
         flex-direction: row;
         color: #000;
+        font-size: 16px;
     }
 
     
@@ -371,12 +372,14 @@
     }
     
     
-    /************** section de hébergement et populaire ****************************************/
-    section.offers {
+    /************** section GROUP ****************************************/
+    
+    
+    section.group {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
-        
+        height: auto;
         background-color: var(--main-bg-color);
         border-radius: 20px;
         padding: 30px;
@@ -385,20 +388,210 @@
     }
     
     
+   
     
-    /************** section de "hébergement" ************ ****************************************/
-    section.offersMain {
+    article.offersMain {
         display: flex;
         flex-direction: row;
         width: 70%;
         padding:10px;
         margin:50px;
-        background-color:plum; 
+        background-color:#DEEBFF; 
     }
+    div.spaceAround {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px;
+        height: 400px;
+        margin:auto;
+        background-color: rgb(68, 97, 24);
+    }
+    /**********partie frame15/column2********************/
+    ul#frame15 {
+        display: flex;
+        flex-direction: row;
+        background-color:  #DEEBFF;
+        height: 100%;
+        width: 50%;
+        list-style: none;
+        gap:30px;
+    
+    }
+    ul#column2 {
+        display: flex;
+        flex-direction: row;
+        background-color: fuchsia;
+        height: 100%;
+        width: 50%;
+        list-style: none;
+    }
+    
+    .img {
+        display: flex;
+        height: 124px;
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+        border: 15px solid var(--white, #7fce96);
+       
+    }
+        /* contenu de la card */
+    li.card.Main1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        background-image: url(#image.une);
+        object-fit: cover ;
+        background-position: top center;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: 124px;
+        width: 50%;
+        list-style: none;
+    }
+        
+    li.card-main2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        background-image: url(#image.deux);
+        object-fit: cover ;
+        background-position: top center;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: 124px;
+        width: 50%;
+        list-style: none;
+    }  
+
+    li.card-main3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        background-image: url(#image.trois);
+        object-fit: cover ;
+        background-position: top center;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: 124px;
+        width: 50%;
+        list-style: none;
+    }
+    li.card-main4 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        background-image: url(#image.quatre);
+        object-fit: cover ;
+        background-position: top center;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: 124px;
+        width: 50%;
+        list-style: none;
+       
+       
+    }
+    li.card-main5 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        background-image: url(#image.cinq);
+        object-fit: cover ;
+        background-position: top center;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: 124px;
+        width: 50%;
+        list-style: none;
+       
+       
+    }
+
+    li.card-main6 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        background-image: url(#image.six);
+        object-fit: cover ;
+        background-position: top center;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: 124px;
+        width: 50%;
+        list-style: none;
+    }
+       
+    /* box de contenu de texte */
+   
+    div.card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+        width: 100%;
+        gap: 8px;
+        padding: 0px 15px;
+        background-color: #c44f4f;
+    }
+       
+   
+    .card-title {
+        display: flex;
+        font-weight: bold;
+
+        
+    }
+    
+    .card-subtitle {
+        display: flex;
+        flex-direction: row;
+        align-self: stretch;
+    }
+    
+    .card-rating {
+        display: flex;
+        flex-direction: row;
+        width: 14.294px;
+        height: 13.25px;
+        flex-shrink: 0;
+    }
+    #neutral-star {
+        display: inline-block;
+        color:  #DEEBFF;
+       
+    }
+    #fa-star {
+        display: inline-block;
+        width: 14.294px;
+        height: 13.25px;
+    }
+    
+
+
+
     /************** section "populaire" ************ ****************************************/
     section.offersSponsored {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         padding:10px;
         height: 400px;
@@ -420,142 +613,18 @@
         background-color: rgb(66, 168, 226);
     }
     /* container  */
-    .container {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 10px;
-        border: solid 2px #000
-         
-    }
-    .box {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    
-    .spaceAround {
-        display: flex;
-        justify-content: space-around;
-         width: 100%;  
-    }
-    .element {
-        display: flex;
-        min-height: 150px;
-        min-width: 200px;
-        
-    }
-    .element1 {
-        display: flex;
-        background-color : orange;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        flex-shrink: 1;
-    }
-    .element2 {
-        display: flex;
-        background-color : blue;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        flex-shrink: 1;
-       
-    }
-    .element3 {
-        display: flex;
-        background-color : rgb(7, 73, 7);
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start:1;
-        grid-row-end: 2;
-        flex-shrink: 1;
-        
-    }
-    .element4 {
-        display: flex;
-        background-color: rgb(199, 238, 59);
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        flex-shrink: 1;
-        
-    }
-    .element5 {
-        display: flex;
-        background-color: rgb(76, 182, 182);
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        flex-shrink: 1;
-       
-    }
-    .element6 {
-        display: flex;
-        background-color: rgb(145, 58, 58);
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        flex-shrink: 1;
-       
-    }
+   
     
     
     
     /****** Populaires ***********/
-    .populaires {
-        display: flex;
-        width: 32%;
-    }
     
-    .populaires-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
     
-    .populaires-cards .card {
-        display: flex;
-        margin-top: 33px;
-    }
     
-    .populaires-cards img {
-        display:flex;
-        width: 33%;
-        height: 136px;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-    }
     
-    .populaires-cards .card-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-sizing: border-box;
-        width: 67%;
-        padding-left: 15px;
-    }
     
-    .populaires-cards .card-title {
-        display:flex;
-        margin-top: 10px;
-        margin-bottom: 4px;
-    }
     
-    .populaires-cards .card-subtitle {
-        display:flex;
-        margin: 0;
-    }
     
-    .populaires-cards .card-rating {
-        display: flex;
-        margin-bottom: 5px;
-    }
     
     /****** footer ***********/
     section.footer {
@@ -573,7 +642,7 @@
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 767.98px) {
 
 /**************************** header****************/
 
@@ -659,68 +728,84 @@
 /**************************** sous-section: InfoBar *********************************/
 
     
-
-    .hebergements-and-populaires {
-        flex-direction: column;
-    }
-    section.offers {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hebergements {
-        display: flex;
-        width: 100%;
-    }
-
-    section.offersSponsored {
+/*********************section GROUP**************/
+    section.group {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding:10px;
-        height: 400px;
-        margin:auto;
-        background-color: rgb(68, 97, 24);
-    }
-
-    .populaires {
-        display: flex;
         width: 100%;
-        margin-top: 50px;
+        height: auto;
+        background-color: var(--main-bg-color);
+        border-radius: 20px;
+        padding: 30px;
+        box-sizing: border-box;
     }
 
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    .populaires-cards .card {
-        display: flex;
-        width: 30%;
-    }
 
-    .populaires-cards .card-title {
-        display: flex;
-        font-size: 14px;
-    }
 
-    .populaires-cards .card-subtitle {
-        display: flex;
-        font-size: 13px;
-    }
 
-    .container {
-        display: flex;
-        flex-shrink: 2;
-        
-    }
+
+
+
+article.offersMain {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding:10px;
+    margin:50px;
+    background-color:#DEEBFF; 
+}
+.spaceAround {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+    height: 400px;
+    margin:auto;
+    background-color: rgb(68, 97, 24);
+
+}
+/**********partie frame15********************/
+
+#frame15 {
+    display: flex;
+    flex-direction: row;
+}
+
+#column2 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+/************** section "populaire" ************ ****************************************/
+section.offersSponsored {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+    height: 400px;
+    margin:auto;
+    background-color: greenyellow; 
+}
+
+
+ 
+
+   
+
+    
+
+    
     
 
     
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px) and (min-width: 320px) {
 
     body {
         display: flex;
@@ -922,40 +1007,71 @@
         display: flex;
         width: 190%;
        
-        
-
-        
-
-        
+              
     }
 
 
 
-  /********** section offers   ***********************/
+  /********** section GROUP   ***********************/
    
-    
-    section.offers {
-        flex-wrap: wrap-reverse;
-        width: 100%;
-    }
-    section.offersMain {
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    
-    section.Sponsored {
-        
+    section.group {
+        display: flex;
         flex-direction: column;
-        background-color: #0065FC;
+        width: 100%;
+        height: auto;
+        background-color: var(--main-bg-color);
+        border-radius: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+      
     }
+    
+    
+    
+    
+    article.offersMain {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 70%;
+        padding:10px;
+        margin:50px;
+        background-color:#DEEBFF; 
+    }
+    .spaceAround {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px;
+        height: 400px;
+        margin:auto;
+        background-color: rgb(68, 97, 24);
+    }
+/**********partie frame15********************/
+    #frame15 {
+        display: none;
+    }
+        
+    #column2 {
+        display: flex;
+        flex-direction: row;
+    }    
+
+    /************** section "populaire" ************ ****************************************/
+    section.offersSponsored {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px;
+        height: 400px;
+        margin:auto;
+        background-color: greenyellow;
+    }
+    
     section.activite {
         flex-direction: column;
 
     }
-    .box {
-        display: flex;
-        flex-direction: column;
-    }
+    
     
     section.footer {
         flex-direction: column;
@@ -966,67 +1082,15 @@
         justify-content: center;
     }
     
-    
-    .element1 {
-        display: flex;
-        background-color : orange;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-      
-    }
-    .element2 {
-        display: flex;
-        background-color : rgb(0, 255, 179);
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        
-       
-    }
-    .element3 {
-        display: flex;
-        background-color : rgb(7, 73, 7);
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start:3;
-        grid-row-end: 4;
-        
-        
-    }
-    .element4 {
-        display: flex;
-        background-color: rgb(199, 238, 59);
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
-        
-        
-    }
-    .element5 {
-        display: flex;
-        background-color: rgb(76, 182, 182);
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 5;
-        grid-row-end: 6;
-        
-       
-    }
-    .element6 {
-        display: flex;
-        background-color: rgb(145, 58, 58);
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        flex-shrink: 1;
-    }
-}
-}
+    @media (min-width: 1440px) {
 
 
+       body  {
+        max-width:1440px;
+        margin :auto var(--filter-bg-color)
+         
+       }  
+ 
 }
+}
+} 
