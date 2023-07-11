@@ -375,7 +375,7 @@
     /************** section GROUP ****************************************/
     
     
-    section.group {
+    section.Group {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -390,13 +390,7 @@
     
    
     
-    article.offersMain {
-        display: flex;
-        flex-direction: row;
-        width: 70%;
-        padding:10px;
-        margin:50px;
-        background-color:#DEEBFF; 
+   
     }
     div.spaceAround {
         display: flex;
@@ -412,8 +406,8 @@
         display: flex;
         flex-direction: row;
         background-color:  #DEEBFF;
-        height: 100%;
-        width: 50%;
+        height: 60%;
+        width: 100%;
         list-style: none;
         gap:30px;
     
@@ -422,15 +416,15 @@
         display: flex;
         flex-direction: row;
         background-color: fuchsia;
-        height: 100%;
-        width: 50%;
-        list-style: none;
+        height: 60%;
+        width: 100%;
+        list-style: none;  /* enlever le point de liste */
     }
     
     .img {
         display: flex;
         height: 124px;
-        width: 100%;
+        width: auto;
         border-radius: 20px 20px 0px 0px;
         border: 15px solid var(--white, #7fce96);
        
@@ -747,34 +741,34 @@
 
 
 
-article.offersMain {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    padding:10px;
-    margin:50px;
-    background-color:#DEEBFF; 
+    article.offersMain {
+         display: flex;
+         flex-direction: column;
+        width: 70%;
+        padding:10px;
+        margin:50px;
+        background-color:#DEEBFF; 
 }
-.spaceAround {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:10px;
-    height: 400px;
-    margin:auto;
-    background-color: rgb(68, 97, 24);
+    .spaceAround {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px;
+        height: 400px;
+        margin:auto;
+        background-color: rgb(68, 97, 24);
 
 }
 /**********partie frame15********************/
 
-#frame15 {
-    display: flex;
-    flex-direction: row;
+    #frame15 {
+        display: flex;
+        flex-direction: row;
 }
 
-#column2 {
-    display: flex;
-    flex-direction: row;
+    #column2 {
+        display: flex;
+        flex-direction: row;
 }
 
 
@@ -782,14 +776,14 @@ article.offersMain {
 
 
 /************** section "populaire" ************ ****************************************/
-section.offersSponsored {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:10px;
-    height: 400px;
-    margin:auto;
-    background-color: greenyellow; 
+    section.offersSponsored {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px;
+        height: 400px;
+        margin:auto;
+        background-color: greenyellow; 
 }
 
 
@@ -1048,7 +1042,7 @@ section.offersSponsored {
     }
 /**********partie frame15********************/
     #frame15 {
-        display: none;
+        display: flex;
     }
         
     #column2 {
@@ -1086,11 +1080,11 @@ section.offersSponsored {
 
 
        body  {
-        max-width:1440px;
+        max-width: 1440px;
         margin :auto var(--filter-bg-color)
          
        }  
  
 }
 }
-} 
+}
