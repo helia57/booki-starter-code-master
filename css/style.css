@@ -21,7 +21,7 @@
     body {
         display: flex;
         flex-direction: column;
-        
+        width: 100%;
         margin: 0;
         
     }
@@ -385,176 +385,81 @@
     
     section.Group {
         display: flex;
-       
-       
+        align-items: center;
+        gap: 40px;
+        align-self: stretch;
         
+        background-color: #c44f4f;
+       
     }
     
     
    
-    
+     /**********partie hebergement a Marseille********************/
    
     
     div.spaceAround {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 10px;
-        height: 500px;
-        margin: 70%;
-        background-color: rgb(68, 97, 24);
-        gap: 30px;
         padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        flex: 1 0 0;
+        align-self: stretch;
+        background-color: rgb(68, 97, 24);
+
     }
-    /**********partie frame15/column2********************/
+
+     /**********partie frame15/column2********************/
     ul#frame15 {
         display: flex;
-        flex-direction: row;
+        flex-wrap: nowrap;
         background-color:  #DEEBFF;
-        height: 100%;
-        width: 100%;
-        gap: 8px;
-        padding: 0px 15px;
+        align-items:start;
+        justify-content: start;
+        align-items: stretch;
+        gap: 30px;
+        align-self: stretch;
+        padding: 0px;
     
     }
     ul#column2 {
         display: flex;
-        flex-direction: row;
+        flex-wrap: nowrap;
         background-color: fuchsia;
-        height: 100%;
-        width: 100%;       /* reglage de la largueur "hébergements" */
-        gap: 8px;
-        padding: 0px 15px; 
+        align-items:start;
+        justify-content: start;
+        align-items: stretch;
+        gap: 30px;
+        align-self: stretch;
+        padding: 0px;
          
     }
-
-    img {
-        display: flex;
-        height: 124px;
-        align-self: stretch;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px;
-        border: 15px solid var(--white, #7fce96);
-    }
-
+    /**********partie creation de "cards main "**********/
    
-        /* contenu de la card */
-    .Main1 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        align-self: stretch;
-        background-image: url(#image.une);
-        background-size: cover;
-        background-position: top center;
-        padding-bottom: 15px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        width:20%
-        
-    }
-        
-    .Main2 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        align-self: stretch;
-        background-image: url(#image.deux);
-        background-size: cover;
-        background-position: top center;
-        padding-bottom: 15px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        width:20%
-    }  
-
-    .Main3 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        align-self: stretch;
-        background-image: url(#image.trois);
-        background-size: cover;
-        background-position: top center;
-        padding-bottom: 15px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        width:20%
        
-    }
-    .Main4 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        align-self: stretch;
-        background-image: url(#image.quatre);
-        background-size: cover;
-        background-position: top center;
-        padding-bottom: 15px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        width:20%
-        
-       
-       
-    }
-    .Main5 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        align-self: stretch;
-        background-image: url(#image.cinq);
-        background-size: cover;
-        background-position: top center;
-        padding-bottom: 15px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        width:20%
-        
-       
-       
-    }
-
-    .Main6 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        align-self: stretch;
-        background-image: url(#image.six);
-        background-size: cover;
-        background-position: top center;
-        padding-bottom: 15px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        width:20%
-        
-    }
-       
-    /* box de contenu de texte */
+    
+     /* box de contenu de texte */
    
-    div.card-content {
+     div.card-content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        box-sizing: border-box;
-        width: 100%;
-        gap: 8px;
+        border-radius: 20px 20px 20px 20px;
         padding: 0px 15px;
+        align-content: space-between;                                /**********partie texte "**********/
+        gap: 8px;
+        align-items: start;
+        justify-content: center;
         background-color: #c44f4f;
+        height: auto;
+        width: auto;
     }
        
    
     .card-title {
         display: flex;
+        flex-wrap: nowrap;
         font-weight: bold;
-
-        
     }
     
     .card-subtitle {
@@ -580,23 +485,196 @@
         width: 14.294px;
         height: 13.25px;
     }
-    
-    .h4 {
-        display: flex;
-        flex-direction: row;
+    .h3.card-title {
+        font-weight: bolder;
     }
-
-
-    /************** section "populaire" ************ ****************************************/
-    section.offersSponsored {
+    p {
+        font-size: 14px;
+    }
+   
+     /* rectangle avec une image */
+    .box-img1 {
+        height: 124px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/fred-kleber.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+    .box-img2 {
+        height: 124px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/febrian-zakaria.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .box-img3 {
+        height: 124px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/reisetopia.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .box-img4 {
+        height: 124px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/annie-spratt.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .box-img5 {
+        height: 124px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/marcus-loke.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .box-img6 {
+        height: 124px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/nicate-lee.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+        /* contenu des differentes "cards" */
+    .Main {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 10px;
-        height: 400px;
-        margin: auto;
-        background-color: greenyellow;
+        align-items: stretch;
+        gap: 4px;
+        border-radius: 20px;
+        width: 33%;
+        background-color: rgb(105, 90, 90);
+        /* Shadow/Card */
+        box-shadow:0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+        list-style: none;
+               
     }
+        
+   
+   
+         /* partie card pour mobile caché*/
+    
+    .mediaMobile {
+        display: none;
+       
+    }
+    /************** section offersSponsored = "populaire" ******************************************************/
+    aside.offersSponsored {
+        display: flex;
+        width: 429px;
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        align-self: stretch;
+        
+        background-color: greenyellow;
+
+    }
+
+    .containerSponso {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        align-self: stretch;
+        
+    }
+
+        /* container du titre "les plus populaires" */
+    #titrePopulaire {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50.825px;
+        align-self: stretch;
+        background-color: #97afd3;
+    }
+    /* cards sponsored pour desktop" */
+    .populaire-img7 {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 146px;
+        width: 123px;
+        align-self: stretch;
+        border-radius: 20px 0px 0px 20px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/emile-guillemot.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .populaire-img8 {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 146px;
+        width: 123px;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        border-radius: 20px 0px 0px 20px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/aw-creative.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .populaire-img9 {
+        height: 146px;
+        width: 123px;
+        display: flex;
+        align-self: stretch;
+        border-radius: 20px 0px 0px 20px;
+        border: 5px solid var(--white, #FFF);
+        background: url(../images/hebergements/febrian-zakaria2.jpg), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    li.card.Sponsored {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        background: #962b8d;
+        border-radius: 20px;
+        list-style: none;
+        
+       
+        /* Shadow/Card */
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+    div.card-content-Pop {
+        display: flex;
+        flex-direction: column;
+        width: 246px;
+        height: 136px;
+        padding: 10px 5px 5px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+
+    /* image en background, la partie "content" est la même que pour les cards hebergements */
+    
+        
+    
+
+    
+
+
     /************** section de activité ****************************************/
     
     
@@ -817,9 +895,14 @@
     } 
 
 /************  section logo Reservia  **************************/
-    
+    .logoReservia {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     div#logocontainer {
-       justify-content: center;
+        justify-content: center;
         padding: 30px;
         align-self: center;
     }  
@@ -1042,12 +1125,16 @@
     }
         
     #column2 {
-        display: flex;
-        flex-direction: row;
-    }    
+        display: none;
+        
+    }     
 
-    /************** section "populaire" ************ ****************************************/
-    section.offersSponsored {
+    .mediaMobile {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section.Group {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1057,6 +1144,7 @@
         background-color: greenyellow;
     }
     
+/**************************** section "activité"  @media 768 *******************************************************************/
     section.activite {
         flex-direction: column;
 
@@ -1065,11 +1153,6 @@
     
     section.footer {
         flex-direction: column;
-    }
-    .logoReservia {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
     }
     
    
