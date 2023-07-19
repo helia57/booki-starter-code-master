@@ -1,4 +1,4 @@
-<!DOCTYPE html>  <!-- garantit que le navigateur suit les spécifications les plus pertinentes -->                          <!--derniere modification le 19/07/2023 par Elia DE FAYS-->
+<!DOCTYPE html>  <!-- garantit que le navigateur suit les spécifications les plus pertinentes, conseillé mais pas obligatoire -->      <!--derniere modification 19/07/2023 par Elia DE FAYS-->
 <html lang="fr">   <!-- langue francais -->
               <!-----------------head debut = chargement des elements pour le fonctionnnement de la page------------------->
     <head>
@@ -17,7 +17,7 @@
          
     </head> 
     <body>
-        <header> <!--------------------------------Section HEADER  ------------------------------------------------------------------------------------------>
+        <header> <!-------------------------------- HEADER  ------------------------------------------------------------------------------------------>
             <div id="logo-container">                                                <!--partier logo-->   
                 <img id="logo" src="images/logo/Booki.png" alt="Logo Booki"  titre = "booki, réservation en ligne de vacances sur Marseille " > <!--logo-->
             </div>
@@ -28,20 +28,20 @@
         </header>
     
         <main>  <!-- contenu du corps de la page--->
-            <section class="infogroup"> <!--------------------------------------------------- Partie INFOGROUP = Formulaire--------------------------------------------------------->
-                <article class="Presentation">                                                                              <!-- Partie "headline"= Presentation-->
+            <section class="infogroup"> <!--------------------------------------------------- Partie Formulaire--------------------------------------------------------->
+                <article class="Presentation">                                                                              <!------  Presentation------->
                         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                         <p>En plein centre ville ou en pleine nature<p>
                 </article>
-                <article class="zone-de-Recherche">                                                                             <!-- partie "SearchBar" = zone de recherche-->
-                    <form method="post" action="#" id="form-bouton-recherche">                                                                                  <!-- action rester libre pour URL futur-->
+                <article class="zone-de-Recherche">                                                                             <!-- --- zone de recherche----->
+                    <form method="post" action="#" id="form-bouton-recherche">                                                                    
                         <i class="fa-solid fa-location-dot" aria-hidden="true" role="img"></i> 
                         <input type="search" name="localisation" placeholder=" Marseille, France" />    <!-- champs à remplir-->
                         <button type="button" class="bouton-Rechercher-Desktop" value="rechercher">Rechercher</button>
                         <button type="button" class="bouton-Rechercher-Mobile"><i class="fa-solid fa-magnifying-glass" role="button" ></i></button>
                     </form>
                 </article>
-                <article id="filterBar">                                                                                     <!--debut partie "filterBar" = filtres de recherche-->
+                <article id="filterBar">                                                                                     <!------- filtres de recherche---------->
                         <h2>Filtres</h2>
                         <div id="choix">
                             <div id="frame16">
@@ -74,17 +74,16 @@
                             </div>
                         </div>
                 </article>
-                <article class="infoBar">  <!--partie Infobar = information logement disponible-->
+                <article class="infoBar">                                                                   <!------------------ information --------------->
                     <div class="infoIcon">
                     <i class="fa-solid fa-info" aria-hidden="true" role="img"></i>
                     </div>
                     <p> Plus de 500 logements disponibles dans cette ville</p>
                 </article>
-            
             </section>   
-            <section class="Group">
+            <section class="Group">         <!--------------------------------------------------- Partie hebergements et populaire--------------------------------------------------------->
                 <div class="spaceAround">
-                    <h1 id="ancre1"> Hébergements à Marseille</h1>
+                    <h1 id="ancre1"> Hébergements à Marseille</h1>                                                                      <!------------------tous les hebergements --------------->
                     <ul id="frame15">
                         <li class="card-Main un">
                             <a href="#">
@@ -206,7 +205,7 @@
                     </ul>
                     <a href="#"><h4>Afficher plus</h4></a>
                 </div>
-                <aside class="offersSponsored"> <!--------article offersSponsored = hebergement populaire a marseille---------------->
+                <aside class="offersSponsored">                                                                 <!-------------- hebergement populaire --------------->
                     <div id="titrePopulaire">
                         <h1 id="pop">Les plus populaires</h1>
                         <i class="fa-solid fa-chart-line" aria-hidden="true" ></i>
@@ -267,7 +266,7 @@
                     </div>
                 </aside>
             </section>
-            <section class="activite"> <!-----------------section ACTIVITE-------------------------------------------------------------------------------------------------->
+            <section class="activite">                                                    <!-----------------partie ACTIVITE--------------------------------------------------------------------->
                 <div class="titre-activite"
                     <h1 id="ancre2">Activités à Marseille</h1>
                 </div>
@@ -306,21 +305,21 @@
                     </article>
                 </div>
             </section>
-            <footer>
+            <footer> <!--------------------------------------------------- footer--------------------------------------------------------->
                 <div class="footer-gauche">
-                    <a class="footer-propos" href="#"><h2>&Agrave propos</h2></a>
+                    <a class="footer-propos" href="#"><h2>&Agrave propos</h2></a>               <!------------------ A propos --------------->
                     <p>Fonctionnement du site</p>
                     <p>Conditions générales</p>
                     <p>Données et confidentialité</p>
                 </div>
                 <div class="footer-droit">
-                    <a class="footer-hebergements" href="#"><h2>Nos hébergements</h2></a>
+                    <a class="footer-hebergements" href="#"><h2>Nos hébergements</h2></a>           <!------------------conditions spécifiques --------------->
                     <p>Charte qualité</p>
                     <p>Proposer votre hôtel</p>
                     <p></p>
                 </div>
                 <div class ="footer-milieu">
-                    <a class="footer-assistance" href="#"><h2>Assitance</h2></a>
+                    <a class="footer-assistance" href="#"><h2>Assitance</h2></a>                    <!------------------contact --------------->                    
                     <p>Centre d'aide</p>
                     <p>Nous contacter</p>
                     <p></p>
