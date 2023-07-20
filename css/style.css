@@ -25,7 +25,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: auto;
+        margin: 0;
         max-width: 1440px; /*taille maximum de l'affichage*/
         min-width: 320px; /*taille minimum de l'affichage*/
         gap:30px
@@ -63,26 +63,26 @@
     header {
         display: flex;
         flex-direction: row;
-        padding-right: 0px;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 950px;
-        align-self: stretch;
+        justify-content: space-between;
+        align-items: start;
+        width:100%;
+        
     }
     
     
     /************partie logo   **************************/
     /* container du logo  */
-    div#logo-container {
+    #logo-container {
         display: flex;
         padding: 30px 50px;
-        align-items: flex-start;
-        gap: 10px;
+        align-items: start;
+        justify-content: left;
+        
     }
     /* image du logo  */
     #logo {
         display: flex;
-        width: 100%;
+        width: 50%;
         object-fit: cover;
     }
     
@@ -95,6 +95,7 @@
         padding: 0px 25px;
         align-items: center;
         gap: 68px;
+         
         
     }
           
@@ -114,6 +115,7 @@
         width: 63px;
         height: 19px;
     }
+
     #hebergements-Nav {
         flex-direction: row;
         font-size: 16px;
@@ -312,8 +314,12 @@
         align-items: start;
     }
     /* texte des barres de filtres */
-    h4 {
+    #h4 {
         font-size: 17px;
+        font-weight: bolder;
+        display: flex; 
+        flex-direction: row;
+        color: #000;
     }
     
     /***** barre information  *****/
@@ -471,7 +477,7 @@
         flex-shrink: 0;
     }
     /* couleur etoile grise */
-    #neutral-star {
+    .neutral-star {
         display: flex;
         color:  #DEEBFF;
     }
@@ -689,6 +695,7 @@
         align-items: center;
         flex: 1 0 0;
         border-radius: 20px;
+        width: 100%;
         
         /* Shadow/Card */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
@@ -721,11 +728,7 @@
         padding: 20px;
         align-items: flex-start;
         gap: 15px;
-        flex: 1 0 0;
         align-self: stretch;
-        
-
-       
        
     }
     /*  liens sur titre des 3 colonnes du footer */
@@ -747,20 +750,14 @@
 
         /* contenant du header */
     header {
-        padding-right: 0px;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 518.601px;
-        align-self: stretch;
+        box-sizing: border-box;
     }  
 /********************* header         ****************/
         /* container du logo  */
-    div#logo-container {
+    #logo-container {
    
         padding: 30px 50px;
-        
-        align-items: flex-start;
-        gap: 10px;
+        box-sizing: content-box;
     } 
         /* image du logo  */
     #logo {
@@ -776,6 +773,9 @@
         gap: 68px;
     }
          /* bouton de la navigation au survol */
+
+
+
 
  /*************** section info-group "presentation,filtres et recherche" ********/
   
@@ -857,7 +857,7 @@
         align-items: start; 
     }
     /* texte des barres de filtres */
-    h4 {
+    #h4 {
         font-size: 16px;
     }
 
@@ -978,7 +978,7 @@ spacearround et  offerssponsored */
  
     img.activity {
         height: 200px;
-        width: 193.5px; 
+        width: 100%; 
         align-self: stretch;
         border-radius: 20px 20px 0px 0px;
         
@@ -1064,6 +1064,7 @@ spacearround et  offerssponsored */
         
         width: 100%;
         justify-content: center;
+        padding: 0px;
         gap: 1.5px;
         align-self: stretch;
     }
@@ -1200,7 +1201,7 @@ spacearround et  offerssponsored */
        
     }
     /* texte des barres de filtres */
-    h4 {
+    #h4 {
         font-size: 14px;
         
     }
@@ -1214,7 +1215,6 @@ spacearround et  offerssponsored */
        
         flex-direction: column-reverse;
         width: 100%;
-        padding: 30px 20px;
         justify-content: center;
         align-items: center;
         gap: 35px;
@@ -1240,13 +1240,24 @@ spacearround et  offerssponsored */
     /*container frame15 et columb2 pour "card hébergement" */
     ul#frame15, ul#column2 {
         flex-direction: column;
-        padding: 20px;
+        padding: 7.5px 0px;
+        
        
     }
     /*partie image card hebergment*/
           
     /* card "hebergement" */
-    
+    .card-Main {
+       
+        width: 100%;
+    }
+
+    .card-Main.un { order:1;}
+    .card-Main.deux {order:6;}
+    .card-Main.trois {order:3;}
+    .card-Main.quatre {order:4;}
+    .card-Main.cinq {order:2;}
+    .card-Main.six {order:5:}
     /* contenu de la card hébergement */
     /* titre de la card hébergement */
 
@@ -1344,9 +1355,6 @@ spacearround et  offerssponsored */
    
    
 
-    p {
-        text-size-adjust: 50%; 
-    }
     
     
     
@@ -1411,8 +1419,6 @@ spacearround et  offerssponsored */
         /* Shadow/Card */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
         width: 100%;
-
-
     }
 
     .titre-activite {
@@ -1423,16 +1429,22 @@ spacearround et  offerssponsored */
 
    /*******footer*******************************************************/ 
     footer {
-        display: flex;
-        padding: 30px;
+       
         flex-direction: column;
         align-items: flex-start;
         gap: 50px;
         align-self: stretch;
         background: var(--grey, #F2F2F2);
-                
     }
-    
+
+    .footer-droit, .footer-milieu, .footer-gauche {
+        
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+       
+        
+    }
    
 }
 }
