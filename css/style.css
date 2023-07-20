@@ -1257,7 +1257,7 @@ spacearround et  offerssponsored */
     .card-Main.trois {order:3;}
     .card-Main.quatre {order:4;}
     .card-Main.cinq {order:2;}
-    .card-Main.six {order:5:}
+    .card-Main.six {order:5;}
     /* contenu de la card hébergement */
     /* titre de la card hébergement */
 
@@ -1435,6 +1435,7 @@ spacearround et  offerssponsored */
         gap: 50px;
         align-self: stretch;
         background: var(--grey, #F2F2F2);
+        padding-left: 30px;
     }
 
     .footer-droit, .footer-milieu, .footer-gauche {
