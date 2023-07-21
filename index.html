@@ -21,12 +21,12 @@
                 <img id="logo" src="images/logo/Booki.png" alt="Logo Booki"   > <!--logo-->
             </div>
             <nav class="menu">                                                       <!--partie Menu-->    
-                <a href="#ancre1">
-                <button type="button" id="hebergements-Nav">Hébergements</button>
-                </a>  
-                <a href="#ancre2">
-                <button type="button" id="activites-Nav">Activités</button>
-                </a>                                                    
+                <button type="button" class="hebergements-Nav"> 
+                    <a class="hebergements-Nav" href="#ancre1">Hébergements</a>
+                </button>
+                <button type="button" class="activites-Nav">
+                    <a class="activites-Nav" href="#ancre2">Activités</a>  
+                </button>
             </nav>
         </header>
     
@@ -87,13 +87,13 @@
             <section class="Group">         <!--Partie hebergements et populaire-->
                 <div class="spaceAround">
                     <h1 id="ancre1"> Hébergements à Marseille</h1>                                                                      <!--tous les hebergements-->
-                    <ul id="frame15"> 
+                    <ul id="boite-a-logements"> 
                         <li class="card-Main un">
                             <a href="#">
                             <img id="image.une"  src="./images/hebergements/fred-Kleber.jpg" alt="Image de la chambre d'hôtel montrant deux lit simple" class="heberg" > 
                             <div class="card-content">
                                 <div class="card-txt-heberg">
-                                    <h3 class="card-title"> hôtel du port</h3>
+                                    <h3 class="card-title"> hôtel du port        </h3>
                                     <p class="card-subtitle">Nuit à partir de 52<span class="euro">€</span></p>
                                     <div class="card-rating">
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -112,7 +112,7 @@
                             <img id="image.deux" src="./images/hebergements/febrian-zakaria.jpg" alt="Image de la chambre d'hôtel montrant un lit et un bureau" class="heberg" >
                             <div class="card-content">
                                 <div class="card-txt-heberg">
-                                    <h3 class="card-title"> Hôtel Chez Amina</h3>
+                                    <h3 class="card-title"> Hôtel Chez Amina     </h3>
                                     <p class="card-subtitle">Nuit à partir de 96<span class="euro">€</span></p>
                                     <div class="card-rating">
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -131,7 +131,7 @@
                             <img id="image.trois" src="./images/hebergements/reisetopia.jpg" alt="Image de la chambre d'hôtel montrant un lit avec grand miroir" class="heberg" >
                             <div class="card-content">
                                 <div class="card-txt-heberg">
-                                    <h3 class="card-title"> hôtel Les mouettes</h3>
+                                    <h3 class="card-title"> hôtel Les mouettes   </h3>
                                     <p class="card-subtitle">Nuit à partir de 76<span class="euro">€</span></p>
                                     <div class="card-rating">
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -145,14 +145,14 @@
                             </div>
                             </a> 
                         </li> 
-                    </ul>
-                    <ul id="column2">
+                    
+                    
                         <li class="card-Main quatre">
                             <a href="#">  
                             <img id="image.quatre" src="./images/hebergements/annie-spratt.jpg" alt="Image de la chambre d'hôtel bleu montrant un lit" class="heberg" >
                             <div class="card-content">
                                 <div class="card-txt-heberg">
-                                    <h3 class="card-title"> hôtel de la mer</h3>
+                                    <h3 class="card-title"> hôtel de la mer      </h3>
                                     <p class="card-subtitle">Nuit à partir de 46<span class="euro">€</span></p>
                                 
                                     <div class="card-rating">
@@ -191,7 +191,7 @@
                             <img id="image.six" src="./images/hebergements/nicate-lee.jpg" alt="Image de la chambre d'hôtel familiale montrant plusieurs lits superposés en bambou" class="heberg">
                             <div class="card-content">
                                 <div class="card-txt-heberg">
-                                    <h3 class="card-title"> Auberge Le Panier</h3>
+                                    <h3 class="card-title"> Auberge Le Panier    </h3>
                                     <p class="card-subtitle">Nuit à partir de 23<span class="euro">€</span></p>
                                     <div class="card-rating">
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -253,7 +253,7 @@
                             <img id="image.neuf" src="./images/hebergements/febrian-zakaria2.jpg" alt="Image de la chambre d'hôtel avec decoration classique" class="populaire">
                             <div class="card-content-Pop">
                                 <div class="card-txt-Pop">
-                                    <h3 class="card-title" > Hôtel Bleu et Blanc</h3>
+                                    <h3 class="card-title-pop" > Hôtel Bleu et Blanc</h3>
                                     <p class="card-subtitle">Nuit à partir de 68<span class="euro">€</span></p>
                                 </div>
                                 <div class="card-rating">
@@ -308,25 +308,27 @@
                     </article>
                 </div>
             </section>
-            <footer> <!--footer-->
-                <div class="footer-gauche">
-                    <a class="footer-propos" href="#"><h2>&Agrave; propos</h2></a>               <!--A propos-->
-                    <p>Fonctionnement du site</p>
-                    <p>Conditions générales</p>
-                    <p>Données et confidentialité</p>
-                </div>
-                <div class="footer-droit">
-                    <a class="footer-hebergements" href="#"><h2>Nos hébergements</h2></a>           <!--conditions spécifiques-->
-                    <p>Charte qualité</p>
-                    <p>Proposer votre hôtel</p>
-                    <p></p>
-                </div>
-                <div class ="footer-milieu">
-                    <a class="footer-assistance" href="#"><h2>Assitance</h2></a>                    <!--contact-->                    
-                    <p>Centre d'aide</p>
-                    <p>Nous contacter</p>
-                    <p></p>
-                </div> 
+            <footer>
+                <section class="fin-page"> <!--footer-->
+                    <div class="footer-gauche">
+                        <a class="footer-propos" href="#"><h2>&Agrave; propos</h2></a>               <!--A propos-->
+                        <p>Fonctionnement du site</p>
+                        <p>Conditions générales</p>
+                        <p>Données et confidentialité</p>
+                    </div>
+                    <div class="footer-droit">
+                        <a class="footer-hebergements" href="#"><h2>Nos hébergements</h2></a>           <!--conditions spécifiques-->
+                        <p>Charte qualité</p>
+                        <p>Proposer votre hôtel</p>
+                        <p></p>
+                    </div>
+                    <div class ="footer-milieu">
+                        <a class="footer-assistance" href="#"><h2>Assitance</h2></a>                    <!--contact-->                    
+                        <p>Centre d'aide</p>
+                        <p>Nous contacter</p>
+                        <p></p>
+                    </div>
+                </section> 
             </footer>
         </main>
     </body>
