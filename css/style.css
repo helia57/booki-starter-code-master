@@ -436,9 +436,8 @@
        
         background-color: rgb(255, 255, 255);
         border-radius: 20px;
-        width: 100%;
-        max-width: 30%;
-        
+        width: 30.8%;
+       
         /* Shadow/Card */
         box-shadow:0px 3px 15px 0px rgba(0, 0, 0, 0.10);
        
@@ -540,6 +539,7 @@
         justify-content: center;
         padding: 30px;
         width: 30%;
+
         gap:30px;
         border-radius: 15px;
         background:#F2F2F2;
@@ -597,6 +597,7 @@
         background:white;
         border-radius: 20px;
         list-style: none;
+        width: 100%;
             
         /* Shadow/Card */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
@@ -669,7 +670,8 @@
     /*  contenant des cards "activites" */ 
     .frame14 {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
         width: 100%;
         height: auto;
         gap: 30px;
@@ -713,7 +715,7 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        flex: 1 0 0;
+        
         border-radius: 20px;
         width: 100%;
         
@@ -931,8 +933,8 @@ spacearround et  offerssponsored */
        
         background-color: rgb(255, 255, 255);
         border-radius: 20px;
-        width: 100%;
-        max-width: 267px;
+        width: 31%;
+       
         
         /* Shadow/Card */
         box-shadow:0px 3px 15px 0px rgba(0, 0, 0, 0.10);
@@ -984,6 +986,7 @@ spacearround et  offerssponsored */
      /* conteneur de "cards populaires" */
     .containerSponso {
         flex-direction: row;
+        flex-wrap: wrap;
         gap:20px;
     }
         /*  titre "les plus populaires" */
@@ -994,7 +997,7 @@ spacearround et  offerssponsored */
         flex-direction: row;
         justify-content: center;
         height: 146px;
-        width: 275px;
+        width: 30%;
         justify-content: center;
         align-items: center;
         
@@ -1319,8 +1322,8 @@ spacearround et  offerssponsored */
         gap: 4px;
         width: 100%;
         
-        min-width: 274px;
-        max-width: 320px;
+        /* taille maximale d'affichage pour mobile */
+       
               
         background-color: rgb(255, 255, 255);
         border-radius: 20px;
@@ -1410,8 +1413,7 @@ spacearround et  offerssponsored */
         align-self: stretch;
         border-radius: 20px;
        
-        min-width: 274px;
-        max-width: 320px;
+        
        
         /* Shadow/Card */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
