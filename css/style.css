@@ -105,7 +105,7 @@
         border-top-color: #0065FC;
         font-weight: 400;
         color: #0065FC;
-        cursor: pointer;
+        cursor: pointer;  /* petite main representant le lien cliquable*/
         align-items: start;
         
        
@@ -144,9 +144,9 @@
 
     }
         
-    /*************** section info-group "presentation,filtres et recherche" ********/
+    /*************** section info-grouper"presentation,filtres et recherche" ********/
     /****** section partie "filtres et recherche" ******/
-    section.infogroup {
+    section.info-grouper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -166,12 +166,8 @@
     /* titre presentation gras */
     h1 {
         display: flex;
-        flex-direction: column;
-        height: 53px;
-        align-items: flex-start;
-        gap: 8px;
-        align-self: stretch;
         font-size: 22px;
+        font-weight:bolder;
     }
     /* texte  de sous-presentation */
     
@@ -261,7 +257,7 @@
          /***** barre de filtre *****/
    /** contenue partie filtres **/
 
-    article#filterBar {
+    .barre-de-filtre {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -272,7 +268,7 @@
 
      /* container des boutons filtres (par 2) */
      
-    div#frame16, div#frame17 {
+    .boite-a-filtres1, .boite-a-filtres2 {
         display: flex;
         flex-direction: row;
         gap:20px;
@@ -312,17 +308,17 @@
         border: 2px solid var(--grey-tint-2, #D9D9D9);
     }
        
-    /* titre  de la  "filtres" */
-    h2 {
+    /* a justement police des titres h3  */
+    h3 {
         display: flex;
         flex-direction: row;
         font-size: 18px;
         align-items: start;
     }
     /* texte des barres de filtres */
-    #h4 {
+    p.text-tri {
         font-size: 17px;
-        font-weight: bolder;
+        font-weight: bold;
         display: flex; 
         flex-direction: row;
         color: #000;
@@ -351,13 +347,13 @@
        
     }    
      /* zone de texte de la barre d'information */
-    p {
+    .text-information {
         display:flex;
         font-weight: lighter;
         font-size: 16px;
     }
     /*barre d'information */
-    article.infoBar {
+    article.barre-info {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -368,9 +364,9 @@
     
     /************** section GROUP ******************/
     
-    /* section contenant 
-    spacearround et  offerssponsored */
-    section.Group {
+    /* section contenu-grouper contenant 
+    offre-hebergements  et  offre-populaires */
+    section.contenu-grouper {
         display: flex;
         flex-direction:row;
         align-items: center;
@@ -383,7 +379,7 @@
      /*****partie "hebergement a Marseille" *****/
    
     /*contenant zone "card hébergement" et titre */
-    div.spaceAround {
+    div.offre {
         display: flex;
         flex-direction: column;
         padding: 30px;
@@ -397,21 +393,25 @@
         background:#F2F2F2;
     }
 
-     /*container frame15 et columb2 pour "card hébergement" */
-    ul#boite-a-logements {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items:start;
-        align-self: stretch;
-        justify-content: center;
+     /*container boite à logements pour "card hébergement" */
+    div.boite-a-logements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: minmax(auto, auto);
+
+       
+        
+        align-items: flex-start;
+        align-content: flex-start;
+        
         gap: 30px;
         padding: 0px;
         width: 100%;
         
     }
     
-    /********** creation de "cards main" **********/
+    /********** creation de "fiche-hebergment" **********/
 
     /*partie image card hebergment*/
 
@@ -427,32 +427,37 @@
 
     }
      /* card "hebergement" */
-    .card-Main {
+    .fiche-hebergement {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 4px;
-       
+        box-sizing: content-box;
         background-color: rgb(255, 255, 255);
         border-radius: 20px;
-        width: 30.8%;
+        width: 100%;
+       
        
         /* Shadow/Card */
         box-shadow:0px 3px 15px 0px rgba(0, 0, 0, 0.10);
        
                
     }
+
+    div, section, article {
+        display: flex;
+    }
      /* contenu de la card hébergement */
    
-     div.card-content {
+     div.fiche-contenu {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-content: center;
     }
     /* cadre texte de la card hébergement */
-    .card-txt-heberg {
+    .fiche-txt-heberg {
         display: flex;
         
         padding: 0px 15px;
@@ -467,28 +472,27 @@
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     }
     /* titre de la card hébergement */
-    .card-title {
+    .fiche-titre {
         display: flex;
         flex-wrap: wrap;
-        font-weight: bold;
-    }
-    /* reglage de la police */
-    h3.card-title {
-        display: flex;
         font-weight: bolder;
-        font-size: 16px;
-       
-        
+        font-size: 15px;
+        size-adjust: auto;
     }
+            
+    
     /* sous-titre de la card hébergement */
-    .card-subtitle {
+    .fiche-sous-titre {
         display: flex;
         flex-direction: row;
         align-self: stretch;
+        font-weight: normal;
+        font-size: 13px;
+        size-adjust: auto;
     }
 
     /* systeme de notation étoilé */
-    .card-rating {
+    .notation {
         display: flex;
         flex-direction: row;
         width: 14.294px;
@@ -514,57 +518,52 @@
     }
 
      /* taille du texte */
-
-    p {
-        font-size: 12px;
-        
+    .note {
+        visibility: hidden;
     }
+   
    
     
     
      /* symbole euro en gras */   
-        span.euro {
+    span.euro {
         font-size: 14px;
         font-weight: 600;
-        text-size-adjust: auto;
+        size-adjust: 70%;
     }
    
     /****** section offersSponsored / "populaire" *****/
     /* contenant de "cards populaires" */
-    aside.offersSponsored {
+    aside.offre-sponsors {
         display: flex;
         flex-direction: column;
         height: 100%;
         padding: 30px;
         justify-content: center;
         padding: 30px;
-        width: 30%;
-
+        width: 429px;
+        box-sizing: border-box;
         gap:30px;
         border-radius: 15px;
         background:#F2F2F2;
         
 
     }
-    /* taille du titre de la card populaire */
-    h3 {
-        font-weight: bolder;
-        font-size: 16px;
-        text-size-adjust: auto;
-        
-    }
+           
+    
     /* conteneur de "cards populaires" */
-    .containerSponso {
+    div.container-sponso {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 30px;
         align-self: stretch;
         
     }
 
-    /*  titre "les plus populaires" */
-    div#titrePopulaire {
+    /*  contenaire du titre "les plus populaires" */
+    div#titre-Populaire {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -572,13 +571,13 @@
         align-self: stretch;
        
     }
-    h1 {
-        font-family: 'Raleway';
+    /*  ajustement des titres h2 dont le titre 
+          "les plus populaires" */
+    h2 {
         font-size: 22px;
         font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-size-adjust: 100%;
+        font-weight: bold;
+        text-size-adjust: auto;
     }
 
      /*  icone en flexbox */
@@ -587,7 +586,7 @@
     }
 
     /* cards "populaires" */
-    li.card.Sponsored {
+    div.fiche-populaire {
         display: flex;
         height: 144px;
         flex-direction: row;
@@ -603,27 +602,18 @@
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     }
     /* contenue cards "populaires" */
-    div.card-content-Pop {
-        display: flex;
-        flex-direction: column;
-        width: 246px;
-        height: 136px; 
-        padding: 10px 5px 5px 15px;
-        align-items:start;
-        align-content: space-between;
-        gap: 24px;
-    }
+        
+    
 
     /* cadre texte cards "populaires" */
-    .card-txt-Pop {
+    .fiche-txt-Pop {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
         align-self: stretch;
-        height: 120px;
-        background-color:white;
-       
+        height: 119px;
+        width: 100%;
     } 
 
      
@@ -632,7 +622,7 @@
     img.populaire {
         display: flex;                                          
         height: 144px;
-        width: 123px;
+        width: 40%;
         object-fit: cover;
         align-self: stretch;                                            
         justify-content: start;
@@ -643,7 +633,8 @@
     /**************************************************/
     /************** section de activité *************/
     
-    /*  container partie "activites" */            
+    
+     /*  container partie "activites" */        
     section.activite {
         display: flex;
         flex-direction: column;
@@ -663,12 +654,9 @@
         height: 30.019px;
         align-self: stretch;
         color: #000;
-       
-
-        
     }
-    /*  contenant des cards "activites" */ 
-    .frame14 {
+    /*  contenant des fiches "activites" */ 
+    div.container-activ {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -676,28 +664,11 @@
         height: auto;
         gap: 30px;
         align-self: stretch;
-        
-       
-       
-        
-        
     }
-    /*  images des cards "activites" */
-    img.activity {
-        display: flex;                                          
-        height: 380px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px;
-        justify-content: flex-end;
-        align-items: center;
-        align-self: stretch;
-        flex: 1 0 0;
-        flex-basis: auto;
-    }
-    /*  contenue des cards "activites" */
-    div.card-content-activite {
-       
+   
+    
+    /*  contenu des cards "activites" */
+    div.fiche-contenu-activite {
         display: flex;
         padding: 20px 19px;
         flex-direction: column;
@@ -709,8 +680,9 @@
         /* Shadow/Card */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     }
-     /*   cards "activites" */
-    .card-Activite {
+    
+     /*   fiche "activites" */
+    .fiche-Activite {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -722,20 +694,27 @@
         /* Shadow/Card */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     }
-    /*  texte des cards "activites" */
-    div.card-txt-activite {
-        display: flex;
-        font-size: 22px;
-        font-weight: bold; /*pour mettre la police en gras */
-        margin-bottom: 8px;
-        height: 49px;
+    /*  image partie "activites" */   
+    img.activity {
+        display: flex;                                          
+        height: 380px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: stretch;
+        
+        flex-basis: auto;
     }
+    
+    
 
 
     /******************************************************************************************************************************/
     /********************************************** footer ************************************************************************/
      /*  zone footer */
-    .fin-page {
+    section.fin-page {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -744,7 +723,7 @@
 
     }
     /*  définition des 3 colonnes du footer */
-    .footer-droit, .footer-milieu, .footer-gauche {
+    div.footer-droit, div.footer-milieu, div.footer-gauche {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -805,7 +784,7 @@
 
 
 
- /*************** section info-group "presentation,filtres et recherche" ********/
+ /*************** section info-grouper "presentation,filtres et recherche" ********/
   
 /** section partie "filtres et recherche" **/
 
@@ -840,7 +819,7 @@
     /***** barre de filtre *****/
         /** contenue partie filtres **/
 
-    article#filterBar {
+    .barre-de-filtre {
        
         flex-direction: column;
         justify-content: center;
@@ -851,7 +830,7 @@
     }
     
     /* container des boutons filtres (par 2) */
-    div#frame16, div#frame17 {
+    .boite-a-filtres1, .boite-a-filtres2 {
         
         flex-direction: row;
         align-items: start;
@@ -867,27 +846,18 @@
     }
     /* chacun des 4 boutons filtres */
     .filtre {
-       
         padding: 4px 19px;
         align-items: center;
         gap: 10px;
-       
     }
     /* couleur au survol et activé des boutons filtres */
 
 
-    /* titre  de la  "filtres" */
-    h2 {
-       
-        flex-direction: column;
-        font-size: 16px;
-        justify-content: center;
-        align-items: start; 
-    }
     /* texte des barres de filtres */
-    #h4 {
-        font-size: 16px;
+    p.text-tri {
+       font-size: 16px;
     }
+    
 
  
 /***** barre information  *****/
@@ -895,7 +865,7 @@
     
 /* section contenant 
 spacearround et  offerssponsored */
-    section.Group {
+    section.contenu-grouper {
         flex-direction:column;
         flex-wrap: wrap;
         box-sizing: border-box;
@@ -906,7 +876,7 @@ spacearround et  offerssponsored */
 /*****partie "hebergement a Marseille" *****/
 
     /*contenant zone "card hébergement" et titre */
-    div.spaceAround {
+    div.offre {
         justify-content: center;
         padding:30px;
         height: 100%;
@@ -917,23 +887,26 @@ spacearround et  offerssponsored */
 
     /*container frame15 et columb2 pour "card hébergement" */
 
-    ul#boite-a-logements {
-        flex-direction: row;
+    div.boite-a-logements {
+        display: grid;
         
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: minmax(auto, auto);
     }
+       
     /*partie image card hebergment*/
 
     /* card "hebergement" */
-    .card-Main {
-        display: flex;
-        flex-direction: column;
+    .fiche-hebergement {
+       
         justify-content: center;
         align-items: center;
         gap: 4px;
-       
+        
         background-color: rgb(255, 255, 255);
         border-radius: 20px;
-        width: 31%;
+        width: 100%;
        
         
         /* Shadow/Card */
@@ -944,12 +917,20 @@ spacearround et  offerssponsored */
     /* contenu de la card hébergement */
 
     /* titre de la card hébergement */
-    h3.card-title {
+    .fiche-titre {
         font-size: 14px;
-        text-size-adjust: 80%;
+        font-weight: bolder;
+        text-size-adjust: 50%;
     }
 
      /* sous-titre de la card hébergement */
+     .fiche-sous-titre {
+        font-size: 11px;
+        font-weight: normal;
+        text-size-adjust: 50%;
+        
+     }
+
     /* systeme de notation étoilé */
     /* couleur etoile grise */
     /* taille des etoiles */
@@ -958,7 +939,8 @@ spacearround et  offerssponsored */
       qui change selon ecran*/
     #premier-titre {
         display :none;   
-    }
+    }  
+
     #deuxieme-titre {
         display: flex;
     }
@@ -967,7 +949,7 @@ spacearround et  offerssponsored */
 
 /****** section offersSponsored / "populaire" *****/
     /* contenant de "cards populaires" */
-    aside.offersSponsored {
+    aside.offre-sponsors {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -980,11 +962,11 @@ spacearround et  offerssponsored */
     h3 {
         font-weight: bolder;
         font-size: 16px;
-        text-size-adjust: 100%; /*reduit la taille du texte*/
+        text-size-adjust: 80%; /*reduit la taille du texte*/
     }
 
      /* conteneur de "cards populaires" */
-    .containerSponso {
+    div.container-sponso {
         flex-direction: row;
         flex-wrap: wrap;
         gap:20px;
@@ -993,7 +975,7 @@ spacearround et  offerssponsored */
         /*  icone en flexbox */
 
     /* cards "populaires" */
-    li.card.Sponsored {
+    div.fiche-populaire {
         flex-direction: row;
         justify-content: center;
         height: 146px;
@@ -1029,17 +1011,26 @@ spacearround et  offerssponsored */
   /**************************************************/
    /************** section de activité *************/
  
-    img.activity {
-        height: 200px;
-        width: 100%; 
+   
+     /*  container partie "activites" */
+    
+   
+
+     /*  container partie "activites" */ 
+    /*  titre partie "activites" */
+   
+    
+     /*  contenant des fiches "activites" */
+    div.container-activ {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 30px;
         align-self: stretch;
-        border-radius: 20px 20px 0px 0px;
-        
+        width: 100%;
+        height: 270px;
     }
-    
-    
-    
-    div.card-content-activite {
+    /*  contenu des cards "activites" */
+    div.fiche-contenu-activite {
         height: 70px;
         width: 100%;
         padding: 20px 19px;
@@ -1051,7 +1042,8 @@ spacearround et  offerssponsored */
         border-radius: 0px 0px 20px 20px;
         background: var(--white, #FFF);
     }
-    .card-Activite {
+     /*   fiche "activites" */
+    .fiche-Activite {
         justify-content: flex-end;
         align-items: center;
         flex: 1 0 0;
@@ -1059,26 +1051,27 @@ spacearround et  offerssponsored */
         border-radius: 20px;
         /* Shadow/Card */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    }
 
+    /*  image partie "activites" */
+    img.activity {
+        height: 200px;
+        width: 100%; 
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
         
     }
-    .frame14 {
-        flex-wrap: wrap;
-        align-items: flex-start;
-        gap: 30px;
-        align-self: stretch;
-        width: 100%;
-        height: 270px;
-    }
+     
         /***** footer /*************************************/
     
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) and (min-width:320px)   {
+@media (max-width: 767.98px) {
 
     
     main {
         padding: 0px;
+        min-width: 320px;
     }
 
 
@@ -1154,9 +1147,9 @@ spacearround et  offerssponsored */
     }
        
      
-    /*************** section info-group "presentation,filtres et recherche" ********/
+    /*************** section info-grouper "presentation,filtres et recherche" ********/
             /* section partie "filtres et recherche" */
-    section.infogroup {
+    section.info-grouper {
         
         padding: 0px 20px;
 
@@ -1220,7 +1213,7 @@ spacearround et  offerssponsored */
      /***** barre de filtre *****/
         /** contenue partie filtres **/
     
-    article#filterBar {
+    .barre-de-filtre {
         
         flex-direction: column;
         margin: 35px 0px;
@@ -1229,7 +1222,7 @@ spacearround et  offerssponsored */
         gap: 20px;
     }
         /* container des boutons filtres (par 2) */
-    div#frame16, div#frame17 {
+    .boite-a-filtres1, .boite-a-filtres2 {
         flex-direction: row;
         gap: 20px;
         width: 100%;
@@ -1261,7 +1254,7 @@ spacearround et  offerssponsored */
        
     }
     /* texte des barres de filtres */
-    #h4 {
+    p.text-tri  {
         font-size: 14px;
         
     }
@@ -1271,7 +1264,7 @@ spacearround et  offerssponsored */
    
        /* section contenant 
     spacearround et  offerssponsored */  
-    section.Group {
+    section.contenu-grouper {
        
         flex-direction: column-reverse;
         width: 100%;
@@ -1284,7 +1277,7 @@ spacearround et  offerssponsored */
         /*****partie "hebergement a Marseille" *****/
 
         /*contenant zone "card hébergement" et titre */
-    div.spaceAround {
+    div.offre {
         
         flex-direction: column;
         padding: 20px;
@@ -1298,8 +1291,9 @@ spacearround et  offerssponsored */
     }
     
     /*container boite-a-logement pour "card hébergement" */
-    ul#boite-a-logements {
-        
+    div.boite-a-logements {
+        grid:none;
+        display: flex;
         flex-direction: column;
         align-items:start;
         align-self: stretch;
@@ -1314,7 +1308,7 @@ spacearround et  offerssponsored */
     /* card "hebergement" */   
     
     
-    .card-Main {
+    .fiche-hebergement{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1346,26 +1340,24 @@ spacearround et  offerssponsored */
     /* contenu de la card hébergement */
     /* titre de la card hébergement */
 
-    h3.card-title {
+    .fiche-titre {
         font-size: 16px;
         text-size-adjust: 80%;
     }
 
 
      /* sous-titre de la card hébergement */
+     .fiche-sous-titre
     /* systeme de notation étoilé */
     /* couleur etoile grise */
     /* taille des etoiles */
      /* taille du texte */
 
-    p {
-        font-size: 14px;
-        
-    }
+    
 
 /****** section offersSponsored / "populaire" *****/
     /* contenant de "cards populaires" */ 
-    aside.offersSponsored {
+    aside.offre-sponsors {
         flex-direction: column;
         height: 100%;
         width: 100%;
@@ -1378,13 +1370,11 @@ spacearround et  offerssponsored */
     }
 
      /* taille du titre de la card populaire */
-        h3 {
-        font-weight: bolder;
-        font-size: 16px;
+        
         
     }
      /* conteneur de "cards populaires" */
-    .containerSponso {
+    div.container-sponso {
         flex-direction: column;
         justify-content: center;
         width: 100%;
@@ -1403,7 +1393,7 @@ spacearround et  offerssponsored */
         /*  icone en flexbox */
    
     /* cards "populaires" */
-    li.card.Sponsored {
+    div.fiche-populaire {
         display: flex;
         height: 146px;
         width: 100%;
@@ -1419,18 +1409,9 @@ spacearround et  offerssponsored */
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     }
      /* contenue cards "populaires" */
-        div.card-content-Pop {
-       
-        padding: 10px 5px 5px 15px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-        align-self: stretch;
-        height: auto;
-        width: 100%;
-    }
+        
      /* cadre texte cards "populaires" */
-        div.card-content {
+        div.fiche-contenu {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1456,7 +1437,9 @@ spacearround et  offerssponsored */
 
 /*******************************************/
    /*********** section de activité *********/
-    section.activite {
+   
+/*  container partie "activites" */ 
+   section.activite {
         flex-direction: column;
        
         align-items: flex-start;
@@ -1465,7 +1448,13 @@ spacearround et  offerssponsored */
         width: 100%;
         height: auto;
     }
-    .frame14 {
+    /*  titre partie "activites" */
+    .titre-activite {
+        height: 30.019px;
+        align-self: stretch;
+    } 
+     /*  contenant des fiches "activites" */
+     div.container-activ {
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: flex-start;
@@ -1476,22 +1465,9 @@ spacearround et  offerssponsored */
        
         
     }
+    /*  contenu des cards "activites" */
     
-    img.activity {
-        flex-direction: column;
-        justify-content: flex-end;
-
-        align-items: center;
-        align-self: stretch;
-        border-radius: 20px 20px 0px 0px;
-        height: 141px;
-        width: 100%;
-        flex: 1 0 0;
-        flex-basis: auto;
-        /* Shadow/Card */
-        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-    }
-    div.card-content-activite {
+    div.fiche-contenu-activite {
         padding: 20px 19px;
         flex-direction: column;
         justify-content: center;
@@ -1503,7 +1479,8 @@ spacearround et  offerssponsored */
         height: 59px;
         width: 100%;
     }
-    .card-Activite {
+     /*   fiche "activites" */
+    .fiche-Activite {
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
@@ -1515,14 +1492,25 @@ spacearround et  offerssponsored */
         width: 100%;
     }
 
-    .titre-activite {
-        height: 30.019px;
+    /*  image partie "activites" */
+    img.activity {
+        flex-direction: column;
+        justify-content: flex-end;
+
+        align-items: center;
         align-self: stretch;
-    }
+        border-radius: 20px 20px 0px 0px;
+        height: 141px;
+        width: 100%;
+        
+        flex-basis: auto;
+        /* Shadow/Card */
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+} 
 
 
    /*******footer*******************************************************/ 
-    .fin-page {
+    section.fin-page {
        
         flex-direction:column;
         align-items: flex-start;
@@ -1532,7 +1520,7 @@ spacearround et  offerssponsored */
         padding: 30px;
     }
 
-    .footer-droit, .footer-milieu, .footer-gauche {
+    div.footer-droit, .footer-milieu, .footer-gauche {
         
         flex-direction: column;
         width: 100%;
@@ -1540,10 +1528,16 @@ spacearround et  offerssponsored */
        
         
     }
-
+@media (max-width:320px) {
+    
+    body {
+        display: none;
+    }
+    
+}
        
 }
-}  
+  
 
 
 
