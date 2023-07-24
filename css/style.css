@@ -44,6 +44,7 @@
     div, section, article, aside, span {
         display: flex;
     }
+
       /*gère les liens*/  
     a {
         display: flex;
@@ -123,7 +124,8 @@
     /* image du logo  */
     #logo {
         display: flex;
-        width: 50%;
+        width: 61,1px;
+        height: 19px;
         object-fit: cover;
     }
     
@@ -155,6 +157,7 @@
         display: flex;
         flex-direction: row;
         font-size: 16px;
+        font-weight: 500;
         width: 63px;
         height: 19px;
     }
@@ -163,13 +166,14 @@
         display: flex;
         flex-direction: row;
         font-size: 16px;
+        font-weight: 500;
         width: 112px;
         height: 19px;
     }
     /* costumisation du bouton pour 
     barre bleu au dessus en bord de page*/
     .activites-Nav, .hebergements-Nav {    
-        padding-top: 35px;  /* releve la barre bleu*/
+        padding-top: 8px;  /* releve la barre bleu*/
         background-color:transparent; 
         border-top-width: 2px;
         border-color: transparent;
@@ -405,7 +409,7 @@
      /*****partie "hebergement a Marseille" *****/
    
     /*contenant zone "card hébergement" et titre */
-    .offre {
+    .offre-hebergements {
         display: flex;
         flex-direction: column;
         padding: 30px;
@@ -482,7 +486,6 @@
         display: flex;
         flex-direction: column;
         padding: 0px 15px;
-        flex-direction: column;
         align-items: flex-start; 
         gap: 8px;
         align-self: stretch;
@@ -747,14 +750,14 @@
             color:var(--noir);
             font-weight: 700;
             line-height: normal;
-            font-size: 15px;
+            font-size: 13px;
             
         }
     
         p.fiche-sstitre {
             
             font-family: 'Raleway',sans-serif;
-            font-size: 14px;
+            font-size: 11px;
             font-style: normal;
             font-weight: light;
             line-height: normal;
@@ -918,7 +921,7 @@ spacearround et  offerssponsored */
 /*****partie "hebergement a Marseille" *****/
 
     /*contenant zone "card hébergement" et titre */
-    .offre {
+    .offre-hebergements {
         justify-content: center;
         padding:30px;
         height: 100%;
@@ -1271,7 +1274,7 @@ spacearround et  offerssponsored */
         /*****partie "hebergement a Marseille" *****/
 
         /*contenant zone "card hébergement" et titre */
-    .offre {
+    .offre-hebergements {
         flex-direction: column;
         padding: 20px;
         align-items: flex-start;
