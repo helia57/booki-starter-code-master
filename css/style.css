@@ -124,7 +124,7 @@
     /* image du logo  */
     #logo {
         display: flex;
-        width: 61,1px;
+        width: 61px;
         height: 19px;
         object-fit: cover;
     }
@@ -283,14 +283,11 @@
         border: 1px solid var(--main-color);
         font-weight: bold;
         font-size: 18px;
-        
-        
     }
 
     /* bouton rechercher pour mobile non-apparent */
     .bouton-Rechercher-Mobile {
         display:none;
-       
     }
     
          /***** barre de filtre *****/
@@ -765,7 +762,7 @@
             font-family: 'Raleway',sans-serif;
             font-size: 11px;
             font-style: normal;
-            font-weight: light;
+            font-weight: 400;
             line-height: normal;
         }
         .fiche-contenu {
@@ -1059,7 +1056,7 @@ spacearround et  offerssponsored */
         gap: 10px;
         align-self: stretch;
         border-radius: 0px 0px 20px 20px;
-        background: (--white);
+        background: var(--blanc);
     }
      /*   fiche "activites" */
     .fiche-Activite {
