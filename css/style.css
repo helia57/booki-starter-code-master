@@ -60,6 +60,7 @@
         font-family: 'raleway', sans-serif;
         color:var(--noir);
         font-size: 16px;
+        font-weight: 400;
         
     }
 
@@ -219,6 +220,9 @@
         gap: 24px;
         height: 49px;
         width: 100%;
+        font-weight: 700;
+        font-size: 18px;
+        
     }
     
     /* zone de frappe et texte de substitution  */
@@ -246,6 +250,7 @@
         border: 1px solid var(--main-color);
         font-weight: bold;
         font-size: 18px;
+        cursor: pointer;
     }
 
     /* bouton rechercher pour mobile non-apparent */
@@ -303,6 +308,7 @@
         display: flex; 
         flex-direction: row;
         color: #000;
+        cursor: pointer;
 
     }
     /* couleur au survol et activé des boutons filtres */
