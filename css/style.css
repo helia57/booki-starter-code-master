@@ -41,32 +41,30 @@
         gap: 35px
     }
 
-    div, section, article, aside, span {
-        display: flex;
-    }
+    
 
       /*gère les liens*/  
     a {
-        display: flex;
-        flex-direction: column;
+        
         text-decoration: none; /*pas de surlignage*/  
         font-family: 'raleway', sans-serif;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
         color: var(--noir)
         
     }
 
     /*ajustements des polices*/
     p {
-        display: flex;
+        
         font-family: 'raleway', sans-serif;
         color:var(--noir);
         font-size: 16px;
         
     }
-    p.fiche-titre {
-        display: flex;
+
+    h4.fiche-titre {
+        
         font-family: 'raleway', sans-serif;
         color:var(--noir);
         font-weight: 700;
@@ -107,8 +105,6 @@
         justify-content: space-between;
         align-items: start;
         width:100%;
-        padding-right: 50px;
-        
     }
     
     
@@ -119,7 +115,6 @@
         padding: 30px 50px;
         align-items: start;
         justify-content: left;
-        
     }
     /* image du logo  */
     #logo {
@@ -131,60 +126,28 @@
     
     /************ partie menu/navigation  **************************/
     /* contenant de la navigation  */  
-    .menu {
+    nav {
         display: flex;
-        flex-direction: row;
-        width: 328.601px;
-        padding: 0px 25px;
-        align-items: center;
         gap: 68px;
-         
-        
+        padding: 0px 50px;
     }
           
       /* bouton de la navigation au survol */  
-    .activites-Nav:hover, .hebergements-Nav:hover, .activites-Nav:active, .hebergements-Nav:active  {          
+    nav a:hover, nav a:active {          
         border-top-color: var(--main-color);
-        font-weight: 400;
         color: var(--main-color);
         cursor: pointer;  /* petite main representant le lien cliquable*/
-        align-items: start;
-        
-       
     }
-    /* bouton de la navigation activite*/
-    .activites-Nav {
-        display: flex;
-        flex-direction: row;
-        font-size: 16px;
-        font-weight: 500;
-        width: 63px;
-        height: 19px;
+    
+    /*style du lien*/   
+    nav a {    
+        border-top: 2px; 
+        border-top-style: solid;
+        border-top-color: transparent;
+        padding: 19px; 
     }
-    /* bouton de la navigation hebergements*/
-    .hebergements-Nav {
-        display: flex;
-        flex-direction: row;
-        font-size: 16px;
-        font-weight: 500;
-        width: 112px;
-        height: 19px;
-    }
-    /* costumisation du bouton pour 
-    barre bleu au dessus en bord de page*/
-    .activites-Nav, .hebergements-Nav {    
-        padding-top: 8px;  /* releve la barre bleu*/
-        background-color:transparent; 
-        border-top-width: 2px;
-        border-color: transparent;
-        width: 100%;
-        align-items: flex-start;
-    }
-    /* balise lien/ flexbox  */
-    a {
-        display: flex;
-        width: 100%;
-    }
+   
+   
     /*************** section info-grouper"presentation,filtres et recherche" ********/
     /****** section partie "filtres et recherche" ******/
     .info-grouper {
@@ -362,12 +325,14 @@
         background-color:var(--gris-fond);  /* couleur de fond */
         padding-right: 5px;
         padding-left: 5px;
+        justify-content: center;
         border-radius: 25px; /* arrondi du l'icone info */
-        line-height: 1; /* reglage alignement (haut/bas) de l'icone */
+        line-height: 1.2; /* reglage alignement (haut/bas) de l'icone */
+         
     }
 
     /* pointe le contenant de l'icone de la barre d'information */
-    .info_icon {
+    .info-icon {
         display: flex;
         flex-direction: row;
         gap: 10px;
@@ -452,7 +417,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         gap: 4px;
         box-sizing: content-box;
         background-color:var(--blanc);
@@ -514,9 +479,6 @@
     .fa-xs {
         font-size: 0.75em;
         line-height: 0.8;
-       
-        
-       
     }
     
     /* 2eme titre de la card main1 qui change selon ecran*/
@@ -531,10 +493,8 @@
    
      /* symbole euro en gras */   
     .euro {
-        display:flex;
         font-size: 14px;
         font-weight: 600;
-       
     }
    
     /****** section offersSponsored / "populaire" *****/
@@ -747,18 +707,15 @@
 
 @media (max-width: 1272px) {
         
-        p.fiche-titre {
-            display: flex;
+        h4.fiche-titre {
             font-family: 'raleway', sans-serif;
             color:var(--noir);
             font-weight: 700;
             line-height: normal;
-            font-size: 13px;
-            
+            font-size: 12px;
         }
     
         p.fiche-sstitre {
-            
             font-family: 'Raleway',sans-serif;
             font-size: 11px;
             font-style: normal;
@@ -784,8 +741,8 @@
 /* Medium devices (tablets, less/equal than 1024px) **********************************************************************************************/
 @media (max-width: 1024px) {
     /* reglage police */
-    p.fiche-titre {
-        display: flex;
+    h4.fiche-titre {
+       
         font-family: 'raleway', sans-serif;
         color:var(--noir);
         font-weight: 700;
@@ -796,7 +753,7 @@
     }
 
     p.fiche-sstitre {
-        display: flex;
+       
         font-family: 'Raleway',sans-serif;
         font-size: 14px;
         font-style: normal;
@@ -827,13 +784,11 @@
 
 /************ partie menu/navigation  **************************/
         /* contenant de la navigation  */
-    .menu {
+    nav {
         padding: 0px 50px;
-        align-items: center;
-        gap: 68px;
+      
     }
-   /* costumisation du bouton pour 
-    barre bleu au dessus en bord de page*/
+   
 
 
 
@@ -948,7 +903,7 @@ spacearround et  offerssponsored */
     /* card "hebergement" */
     .fiche-hebergement {
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         gap: 4px;
         background-color: var(--blanc);
         border-radius: 20px;
@@ -1079,21 +1034,34 @@ spacearround et  offerssponsored */
     }
      
         /***** footer /*************************************/
-    @media (max-width: 891.98px) {
+@media (max-width: 891.98px) {
     
-        p.fiche-titre {
-            font-weight: 700;
-            line-height: normal;
-            font-size: 14px;
-            font-style: normal; 
-        }
-        p.fiche-sstitre {
-            font-family: 'raleway', sans-serif;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }   
+    h4.fiche-titre {
+        font-family: 'raleway', sans-serif;
+        color:var(--noir);
+        font-weight: 700;
+        line-height: normal;
+        font-size: 14px;
+    }
+
+    p.fiche-sstitre {
+        font-family: 'Raleway',sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .fiche-contenu {
+        height: 88px;
+        
+    }
+    .fiche-txt-heberg {
+        height: 88px;
+        gap:15px
+    }
+    .fiche-contenu-activite {
+        height: 70px;
+    }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -1131,35 +1099,35 @@ spacearround et  offerssponsored */
      
 /************   partie menu/navigation **************************/
             /* contenant de la navigation  */    
-    .menu {
+    nav {
         height: 30px;
         width: 100%;
-        justify-content: center;
-        align-items: center;
         gap:0px;
         padding:0px;
     }
 
             /* bouton de la navigation*/    
     .activites-Nav,.hebergements-Nav {
+        display: flex;
         padding: 0px;
-        align-content: center;
         justify-content: center;
         width: 100%;
-        height: 19px;
-        padding-bottom: 32px;
+        padding-bottom: 10px;
     }
       
-      /* costumisation du bouton pour 
-    barre bleu au dessous */
-
-    .activites-Nav:hover,.hebergements-Nav:hover, .activites-Nav:active, .hebergements-Nav:active {   
-        background-color:transparent;
+     nav a {
+        border-bottom: 2px; 
+        border-bottom-style: solid;
         border-top-color: transparent;
+        border-bottom-color: transparent;
+        padding: 19px;
+     }
+
+    nav a:hover,nav a:active {   
         font-weight: 500;
         width: 100%;
-        border-bottom-width: 2px;
         border-bottom-color:var(--main-color); 
+        border-top-color: transparent;
     }
 
    /***** article barre de recherche *****/
@@ -1303,11 +1271,10 @@ spacearround et  offerssponsored */
           
     /* card "hebergement" */   
    
-    .fiche-hebergement{
+    .fiche-hebergement {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
         gap: 4px;
         width: 100%;
         background-color: var(--blanc);
@@ -1316,12 +1283,12 @@ spacearround et  offerssponsored */
         box-shadow:0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     }
     
-    .card-Main.un {order:1;}
-    .card-Main.deux {order:6;}
-    .card-Main.trois {order:3;}
-    .card-Main.quatre {order:4;}
-    .card-Main.cinq {order:2;}
-    .card-Main.six {order:5;}
+    .fiche-hebergement.un {order:1;}
+    .fiche-hebergement.deux {order:6;}
+    .fiche-hebergement.trois {order:3;}
+    .fiche-hebergement.quatre {order:4;}
+    .fiche-hebergement.cinq {order:2;}
+    .fiche-hebergement.six {order:5;}
     /* contenu de la card hébergement */
     /* titre de la card hébergement */
      /* sous-titre de la card hébergement */
@@ -1345,6 +1312,7 @@ spacearround et  offerssponsored */
         gap: 15px;
         align-self: stretch;
         background-color:var(--gris-fond);
+        border-radius: 0px;
     }
 
      /* taille du titre de la card populaire */
