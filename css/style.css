@@ -185,7 +185,7 @@
         border-radius: 15px;
         outline: none; /* Pour supprimer le contour */
         border: 1px solid var(--gris-fond, #F2F2F2);
-        background: var(--white);
+        background: var(--blanc);
     }    
 
     /* bouton de recherche */
