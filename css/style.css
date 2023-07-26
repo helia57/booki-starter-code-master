@@ -1,7 +1,7 @@
 
    
 
-                   /* modif le 19/07/2023 par EDF*/ 
+                   /* modif le 27/07/2023 par EDF*/ 
     * {
         
         
@@ -1476,6 +1476,51 @@ spacearround et  offerssponsored */
        
         
     }
+@media (max-width:392px) {
+    h4.fiche-titre {
+        font-family: 'raleway', sans-serif;
+        color:var(--noir);
+        font-weight: 700;
+        line-height: normal;
+        font-size: 14px;
+    }
+
+    p.fiche-sstitre {
+        font-family: 'Raleway',sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .fiche-contenu {
+        height: 88px;
+        
+    }
+    .fiche-txt-heberg {
+        height: 88px;
+        gap:15px
+    }
+    .fiche-contenu-activite {
+        height: 70px;
+    }
+    p {
+        font-size: 13px;
+    }
+    h2 {
+        font-size: 20px;
+        
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .filtre {
+        font-size: 14px;
+    }
+@media (max-width:351px) {
+    .filtre {
+        font-size: 11px;
+    }
+
 @media (max-width:320px) {
     
     body {
@@ -1486,6 +1531,7 @@ spacearround et  offerssponsored */
        
 }
  
+}
 }
 }
 }
