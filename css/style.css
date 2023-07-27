@@ -1367,7 +1367,7 @@ spacearround et  offerssponsored */
      /*partie image de la card "populaires"*/
     img.populaire {
         height: 146px;
-        width: 111.66666px;
+        width: 100px;
         border-radius: 20px 0px 0px 20px;
         border: 5px solid var(--blanc);
     }
